@@ -1,0 +1,68 @@
+baseURL = "https://miguelsimoni.github.io/"
+languageCode = "pt-br"
+title = "Juan Barros's Blog"
+theme = "future-imperfect"
+publishDir = "docs"
+
+[params]
+  # Sets the meta tag description
+  description          = "HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo"
+  # Sets the navbarTitle that appears in the top left of the navigation bar
+  navbarTitle          = "Juan Barros's Blog"
+  socialAppearAtBottom = true
+  socialAppearAtTop    = true
+
+# Optional Params
+  # Sets navbarTitle to match the section of the website
+  dynamicTitles        = true
+  categoriesByCount    = true
+  # Sets Estimated Reading Time to appear in post headers
+  includeReadingTime   = true
+  loadFavicon          = false
+  faviconVersion       = ""
+
+
+  # These are optional params related to the sidebar. They are recommended, but not
+  # required for proper functionality. HTML is supported within the params.
+[params.intro]
+  header    = "Juan Barros"
+
+  paragraph = "Um pequeno blog para um pouco de visualização de dados."
+
+  about     = "É isso!"
+
+  # This appears at the top of the sidebar above params.intro.header.
+  # A width of less than 100px is recommended from a design perspective.
+  [params.intro.pic]
+    src       = "https://instagram.fcpv3-1.fna.fbcdn.net/t51.2885-19/s150x150/14709442_1820927374792842_2890851824472948736_a.jpg"
+    # Sets Image to be a cirlce
+    circle    = false
+    # Sets Image to be Future Imperfect's hexagon
+    imperfect = true
+    width     = ""
+    alt       = "Juan Barros photo"
+
+[params.postAmount]
+# Sets the number of recent posts to show in the sidebar. The default value is 5.
+    sidebar = 5
+
+# Sets the menu items in the navigation bar
+# Identifier prepends a Font Awesome icon to the menu item
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  identifier = "fa fa-home"
+  weight = 1
+
+# Sets Social Media icons to appear and link to your account. Value should be your
+# username unless otherwise noted. These are the icons affected by socialAppearAtTop
+# and socialAppearAtBottom.
+[social]
+  # Coding Communities
+  github          = "juanbarros2"
+  stackoverflow   = "8896721" # User Number
+  # Social Networks
+  facebook        = "barros2.juan"
+  instagram       = "juanbarros2"
+  # Email
+  email           = "juanlyrabarros@gmail.com"
