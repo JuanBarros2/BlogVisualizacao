@@ -1,6 +1,6 @@
 ---
-title: "Contagem de registros anuais do volume de Boqueirão"
-date: 2017-11-15T12:08:48-03:00
+title: "Ranquear médias anuais"
+date: 2017-11-15T14:08:27-03:00
 draft: false
 ---
 
@@ -13,4 +13,5 @@ draft: false
     const spec = "https://gist.githubusercontent.com/JuanBarros2/2667e5676067449e052c913213bf5685/raw/aa0992359e5f188666cf9d6913424eee13eaaf0b/visual1.json";
   	vegaEmbed('#vis', spec).catch(console.warn);
 </script>
+
 

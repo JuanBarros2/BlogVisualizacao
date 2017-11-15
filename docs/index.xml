@@ -6,10 +6,37 @@
     <description>Recent content on Juan Barros&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 15 Nov 2017 12:08:48 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 15 Nov 2017 14:08:27 -0300</lastBuildDate>
     
 	<atom:link href="https://juanbarros2.github.io/Boqueirao_Visualizacao/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ranquear médias anuais</title>
+      <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-four/</link>
+      <pubDate>Wed, 15 Nov 2017 14:08:27 -0300</pubDate>
+      
+      <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-four/</guid>
+      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/2667e5676067449e052c913213bf5685/raw/aa0992359e5f188666cf9d6913424eee13eaaf0b/visual1.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
+    </item>
+    
+    <item>
+      <title>Média mensal de volumes</title>
+      <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-three/</link>
+      <pubDate>Wed, 15 Nov 2017 14:08:20 -0300</pubDate>
+      
+      <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-three/</guid>
+      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/2667e5676067449e052c913213bf5685/raw/aa0992359e5f188666cf9d6913424eee13eaaf0b/visual1.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
+    </item>
+    
+    <item>
+      <title>Identificar declínios acentuados</title>
+      <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-two/</link>
+      <pubDate>Wed, 15 Nov 2017 14:08:13 -0300</pubDate>
+      
+      <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-two/</guid>
+      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/2667e5676067449e052c913213bf5685/raw/aa0992359e5f188666cf9d6913424eee13eaaf0b/visual1.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
+    </item>
     
     <item>
       <title>Contagem de registros anuais do volume de Boqueirão</title>
@@ -17,7 +44,7 @@
       <pubDate>Wed, 15 Nov 2017 12:08:48 -0300</pubDate>
       
       <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-one/</guid>
-      <description></description>
+      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/2667e5676067449e052c913213bf5685/raw/aa0992359e5f188666cf9d6913424eee13eaaf0b/visual1.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
     </item>
     
   </channel>
