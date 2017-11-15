@@ -6,45 +6,45 @@
     <description>Recent content in Posts on Juan Barros&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 15 Nov 2017 14:08:27 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 15 Nov 2017 14:08:37 -0300</lastBuildDate>
     
 	<atom:link href="https://juanbarros2.github.io/Boqueirao_Visualizacao/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Ranquear médias anuais</title>
+      <title>4 - Identificar declínios acentuados</title>
       <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-four/</link>
-      <pubDate>Wed, 15 Nov 2017 14:08:27 -0300</pubDate>
+      <pubDate>Wed, 15 Nov 2017 14:08:37 -0300</pubDate>
       
       <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-four/</guid>
-      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/2667e5676067449e052c913213bf5685/raw/aa0992359e5f188666cf9d6913424eee13eaaf0b/visual1.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
+      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/5f54da86f6e1f266caa8358ec95d23c8/raw/cd4a4a646da4c90e1b6590504e9516280b5dd316/visual4.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
     </item>
     
     <item>
-      <title>Média mensal de volumes</title>
+      <title>3 - Observando média mensal de volumes</title>
       <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-three/</link>
-      <pubDate>Wed, 15 Nov 2017 14:08:20 -0300</pubDate>
+      <pubDate>Tue, 14 Nov 2017 14:08:27 -0300</pubDate>
       
       <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-three/</guid>
-      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/2667e5676067449e052c913213bf5685/raw/aa0992359e5f188666cf9d6913424eee13eaaf0b/visual1.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
+      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/5f54da86f6e1f266caa8358ec95d23c8/raw/cd4a4a646da4c90e1b6590504e9516280b5dd316/visual3.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
     </item>
     
     <item>
-      <title>Identificar declínios acentuados</title>
+      <title>2 - Ranqueado médias anuais</title>
       <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-two/</link>
-      <pubDate>Wed, 15 Nov 2017 14:08:13 -0300</pubDate>
+      <pubDate>Mon, 13 Nov 2017 14:08:20 -0300</pubDate>
       
       <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-two/</guid>
-      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/2667e5676067449e052c913213bf5685/raw/aa0992359e5f188666cf9d6913424eee13eaaf0b/visual1.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
+      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/5f54da86f6e1f266caa8358ec95d23c8/raw/cd4a4a646da4c90e1b6590504e9516280b5dd316/visual2.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
     </item>
     
     <item>
-      <title>Contagem de registros anuais do volume de Boqueirão</title>
+      <title>1 - Contagem de registros anuais do volume de Boqueirão</title>
       <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-one/</link>
-      <pubDate>Wed, 15 Nov 2017 12:08:48 -0300</pubDate>
+      <pubDate>Sun, 12 Nov 2017 12:08:48 -0300</pubDate>
       
       <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-one/</guid>
-      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/2667e5676067449e052c913213bf5685/raw/aa0992359e5f188666cf9d6913424eee13eaaf0b/visual1.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
+      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/5f54da86f6e1f266caa8358ec95d23c8/raw/cd4a4a646da4c90e1b6590504e9516280b5dd316/visual1.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
     </item>
     
   </channel>
