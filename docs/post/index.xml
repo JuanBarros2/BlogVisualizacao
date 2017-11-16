@@ -17,7 +17,7 @@
       <pubDate>Tue, 14 Nov 2017 14:08:27 -0300</pubDate>
       
       <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-three/</guid>
-      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/5f54da86f6e1f266caa8358ec95d23c8/raw/79df856c5f44872563ac40ec8087e9f6444d58d8/visual3.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
+      <description>const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/5f54da86f6e1f266caa8358ec95d23c8/raw/79df856c5f44872563ac40ec8087e9f6444d58d8/visual3.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);   Finalizando o estudo sobre o volume do açude de Boqueirão, focaremos agora no perfil anual que é esperado para o reservatório, ou seja, como normalmente é dada a distribuição de volumes baseada na média mensal relatada.  Como já relatado anteriormente, o açude vem perdendo volume durante os últimos 7 anos e a estiagem prolongada é um dos motivos para a situação crítica no abastecimento.</description>
     </item>
     
     <item>
