@@ -6,19 +6,10 @@
     <description>Recent content on Juan Barros&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 15 Nov 2017 14:08:37 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 14 Nov 2017 14:08:27 -0300</lastBuildDate>
     
 	<atom:link href="https://juanbarros2.github.io/Boqueirao_Visualizacao/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>4 - Identificar declínios acentuados</title>
-      <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-four/</link>
-      <pubDate>Wed, 15 Nov 2017 14:08:37 -0300</pubDate>
-      
-      <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-four/</guid>
-      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/5f54da86f6e1f266caa8358ec95d23c8/raw/cd4a4a646da4c90e1b6590504e9516280b5dd316/visual4.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
-    </item>
     
     <item>
       <title>3 - Observando média mensal de volumes</title>
@@ -26,16 +17,16 @@
       <pubDate>Tue, 14 Nov 2017 14:08:27 -0300</pubDate>
       
       <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-three/</guid>
-      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/5f54da86f6e1f266caa8358ec95d23c8/raw/cd4a4a646da4c90e1b6590504e9516280b5dd316/visual3.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
+      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/5f54da86f6e1f266caa8358ec95d23c8/raw/79df856c5f44872563ac40ec8087e9f6444d58d8/visual3.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
     </item>
     
     <item>
-      <title>2 - Ranqueado médias anuais</title>
+      <title>2 - Ranqueado médias anuais dos últimos dez anos</title>
       <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-two/</link>
       <pubDate>Mon, 13 Nov 2017 14:08:20 -0300</pubDate>
       
       <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-two/</guid>
-      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/5f54da86f6e1f266caa8358ec95d23c8/raw/cd4a4a646da4c90e1b6590504e9516280b5dd316/visual2.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
+      <description>.floating-box { float: left; margin: 10px; display: block; }     Na última década o açude de Boqueirão sofreu uma crise hídrica jamais vista. Seu nível chegou abaixo de 5% em 2017 e mesmo com racionamento de água a crise quase levou o açude a secar totalmente. Desde o ano de 2011 tivemos uma queda anual considerável, ano após ano até chegar aos níveis atuais.  Ao receber as águas do rio São Francisco foi possível parar o esgotamento completo do manancial, contudo os níveis ainda continuam críticos e a situação demanda cautela, pois ainda temos uma porcentagem muito pequena de água.</description>
     </item>
     
     <item>
@@ -44,7 +35,7 @@
       <pubDate>Sun, 12 Nov 2017 12:08:48 -0300</pubDate>
       
       <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-one/</guid>
-      <description>     const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/5f54da86f6e1f266caa8358ec95d23c8/raw/cd4a4a646da4c90e1b6590504e9516280b5dd316/visual1.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);  </description>
+      <description>O açude Epitácio Pessoa, popularmente conhecido como açude de Boqueirão, é considerado uma das principais fontes de água do estado da Paraíba. Graças à sua grande capacidade e localização geográfica, o açude abastece diversas cidades paraibanas e acaba por ter uma grande importância para a economia. Uma cidade diretamente afetada pela distribuição aquífera de Boqueirão(açude) é a cidade de Campina Grande, conhecida nacionalmente por seu potencial tecnológico e sendo um destaque econômico para as cidades vizinhas.</description>
     </item>
     
   </channel>
