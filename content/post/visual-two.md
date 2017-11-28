@@ -3,6 +3,7 @@ title: "2 - Ranqueado médias anuais dos últimos dez anos"
 date: 2017-11-13T14:08:20-03:00
 draft: false
 ---
+<script src="https://d3js.org/d3.v4.min.js"></script>
 
 <style>
 .floating-box {
