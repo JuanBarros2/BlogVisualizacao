@@ -6,10 +6,19 @@
     <description>Recent content on Juan Barros&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 14 Nov 2017 14:08:27 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 28 Nov 2017 09:14:03 -0300</lastBuildDate>
     
 	<atom:link href="https://juanbarros2.github.io/Boqueirao_Visualizacao/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gráfico de Dispersão com dados de Boqueirão</title>
+      <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visualizacao_lab2/</link>
+      <pubDate>Tue, 28 Nov 2017 09:14:03 -0300</pubDate>
+      
+      <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visualizacao_lab2/</guid>
+      <description>Gráfico de Dispersão com dados de Boqueirão   .mychart rect { fill: steelblue; } .mychart rect:hover { fill: goldenrod; } .mychart text { font: 12px sans-serif; text-anchor: left; }  const alturaSVG = 400, larguraSVG = 900; const margin = {top: 10, right: 20, bottom:40, left: 45}, larguraVis = larguraSVG - margin.left - margin.right, alturaVis = alturaSVG - margin.top - margin.bottom; function desenhaVisualizacao(dados) { let grafico = d3.select(&#39;#chart&#39;) .</description>
+    </item>
     
     <item>
       <title>3 - Observando média mensal de volumes</title>
