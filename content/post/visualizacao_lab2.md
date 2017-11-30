@@ -8,6 +8,8 @@ draft: false
 <div class="container">
     <div class="row">
       <h2>Gráfico de Dispersão com dados de Boqueirão</h2>
+      <p>É mostrado horizontalmente os dados 90-percentil. Na vertical temos os valores de 10-percentil. A intensidade do azul indica
+      a mediana dos registros.</p>
     </div>
     <div class="row mychart" id="chart"/>
 
