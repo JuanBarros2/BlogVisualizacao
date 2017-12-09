@@ -3,8 +3,6 @@ title: "Uma pequena lupa embaçada no Açude Velho"
 date: 2017-12-06T22:09:46-03:00
 draft: true
 ---
-
-<script src="/Boqueirao_Visualizacao/post/static/visualizacao-acude.js"></script>
   
 <div class="container">
     <div class="row">
@@ -15,7 +13,9 @@ separadamente
 • Estabelecer relação entre o número de ciclistas e a intensidade do transito
 • Evidenciar poluição sonora e ambiental exercida pelos automóveis nos horários.</p>
     </div>
-    <div class="row visu1" id="chart1"/>
+    <div class="row visu1" id="chart1">
+      <svg width="960" height="500"></svg>
+    </div>
     <div class="row visu2" id="chart2"/>
     <div class="row visu3" id="chart3"/>
 
@@ -33,4 +33,7 @@ separadamente
       text-anchor: left;
     }
   </style>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/Boqueirao_Visualizacao/post/static/visualizacao-acude.js"></script>
 </div>
