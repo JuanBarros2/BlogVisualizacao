@@ -1,7 +1,7 @@
 ---
 title: "Uma pequena lupa embaçada no Açude Velho"
 date: 2017-12-06T22:09:46-03:00
-draft: true
+draft: false
 ---
   
 <div class="container">

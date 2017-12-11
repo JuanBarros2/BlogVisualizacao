@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Juan Barros&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 28 Nov 2017 09:14:03 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 06 Dec 2017 22:09:46 -0300</lastBuildDate>
     
 	<atom:link href="https://juanbarros2.github.io/Boqueirao_Visualizacao/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Uma pequena lupa embaçada no Açude Velho</title>
+      <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/acude-velho/</link>
+      <pubDate>Wed, 06 Dec 2017 22:09:46 -0300</pubDate>
+      
+      <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/acude-velho/</guid>
+      <description>Uma pequena lupa embaçada no Açude Velho • Ressaltar os horários em que existe mais movimento nas 3 localidades buscando mostrar cada uma separadamente • Quantidade de pessoas que caberia em cada veículo e o espaço que gastaria • Estabelecer relação entre o número de ciclistas e a intensidade do transito • Evidenciar poluição sonora e ambiental exercida pelos automóveis nos horários.
+      .mychart rect { fill: steelblue; } .</description>
+    </item>
     
     <item>
       <title>Gráfico de Dispersão com dados de Boqueirão</title>

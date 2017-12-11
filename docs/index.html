@@ -31,7 +31,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-11-28T09:14:03-03:00"/>
+<meta property="og:updated_time" content="2017-12-06T22:09:46-03:00"/>
 
 
 
@@ -152,6 +152,18 @@
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/Boqueirao_Visualizacao/post/acude-velho/">Uma pequena lupa embaçada no Açude Velho</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2017-12-06'>
+                                    December 6, 2017</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/Boqueirao_Visualizacao/post/visualizacao_lab2/">Gráfico de Dispersão com dados de Boqueirão</a></h3>
                                 
                                 <time class="published" datetime=
@@ -198,17 +210,6 @@
 
                         </article>
                 
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/Boqueirao_Visualizacao/post/">Posts</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2017-11-28'>
-                                    November 28, 2017</time>
-                            </header>
-                            
-                        </article>
-                
 
                 
                     <a href=
@@ -231,7 +232,7 @@
   <header>
     <div class="title">
         
-            <h2><a href="/Boqueirao_Visualizacao/post/visualizacao_lab2/">Gráfico de Dispersão com dados de Boqueirão</a></h2>
+            <h2><a href="/Boqueirao_Visualizacao/post/acude-velho/">Uma pequena lupa embaçada no Açude Velho</a></h2>
         
         
     </div>
@@ -239,11 +240,11 @@
         
 
         <time class="published"
-            datetime='2017-11-28'>
-            November 28, 2017</time>
+            datetime='2017-12-06'>
+            December 6, 2017</time>
         <span class="author"></span>
         
-            <p>2 minute read</p>
+            <p>1 minute read</p>
         
         
     </div>
@@ -255,16 +256,21 @@
   
 
   <div id="content">
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-  
-
-<div class="container">
+    <div class="container">
     <div class="row">
-      <h2>Gráfico de Dispersão com dados de Boqueirão</h2>
-      <p>É mostrado horizontalmente os dados 90-percentil. Na vertical temos os valores de 10-percentil. A intensidade do azul indica
-      a mediana dos registros.</p>
+      <h2>Uma pequena lupa embaçada no Açude Velho</h2>
+      <p>• Ressaltar os horários em que existe mais movimento nas 3 localidades buscando mostrar cada uma separadamente
+         • Quantidade de pessoas que caberia em cada veículo e o espaço que gastaria
+         • Estabelecer relação entre o número de ciclistas e a intensidade do transito
+         • Evidenciar poluição sonora e ambiental exercida pelos automóveis nos horários.</p>
     </div>
-    <div class="row mychart" id="chart"/>
+    <div class="row visu1" id="chart1">
+      <svg width="960" height="500" id = "visu1"></svg>
+    </div>
+    <div class="row visu2" id="chart2">
+      <svg width="960" height="500" id = "visu2"></svg>
+    </div>
+    <div class="row visu3" id="chart3"/>
 
   <style>
     .mychart rect {
@@ -280,60 +286,9 @@
       text-anchor: left;
     }
   </style>
-<script type="text/javascript"> 
-  const alturaSVG = 400, larguraSVG = 900; 
-  const margin = {top: 10, right: 20, bottom:40, left: 45}, 
-  larguraVis = larguraSVG - margin.left - margin.right, 
-  alturaVis = alturaSVG - margin.top - margin.bottom;
 
-  function desenhaVisualizacao(dados) {
-    let grafico = d3.select('#chart')
-    .append('svg')
-    .attr('width', larguraVis + margin.left + margin.right)
-    .attr('height', alturaVis + margin.top + margin.bottom)
-    .append('g')
-      .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
-    let x = d3.scaleLinear()
-      .domain([d3.min(dados, (d) => d.noventa_percentil) - 2, d3.max(dados, (d) => d.noventa_percentil) + 2 ])
-      .range([0, larguraVis]); 
-    let y = d3.scaleLinear()
-      .domain([d3.min(dados, (d) => d.dez_percentil) - 1, d3.max(dados, (d, i) => d.dez_percentil) + 1])
-      .range([0, alturaVis])
-      .rangeRound([alturaVis, 0]); 
-    let escala_cor = d3.scaleLinear()
-                .domain([d3.min(dados, (d) => d.mediana), d3.max(dados, (d)=> d.mediana)])
-                .range(["#1F84C2", "#dcedf7"])
-                .clamp(true);
-    grafico.selectAll('g')
-      .data(dados)
-      .enter()
-        .append('circle')
-          .attr('cy', d => y(d.dez_percentil))
-          .attr('cx', d => x(d.noventa_percentil))
-          .attr('r', 10)
-          .attr('fill',(d) => escala_cor(d.mediana)); 
-
-    grafico.append("g")
-      .attr("transform", "translate(0," + alturaVis + ")")
-      .call(d3.axisBottom(x)); 
-    grafico.append('g')
-      .call(d3.axisLeft(y));
-    grafico.append("text")
-      .attr("transform", "translate(-30," + (alturaVis + margin.top)/2 + ") rotate(-90)")
-      .text("10-percentil");
-    grafico.append("text")
-      .attr("transform", "translate(" + ((larguraVis)/2) + "," + (alturaVis + 30) + " )")
-      .text("90-percentil"); 
-
-    
-   
-  }
-
-
-    d3.json('/Boqueirao_Visualizacao/post/static/boqueirao-por-mes.json', function(dados) {
-        desenhaVisualizacao(dados);
-    });
-  </script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="/Boqueirao_Visualizacao/post/static/visualizacao-acude.js"></script>
 </div>
 
   </div>
@@ -353,8 +308,8 @@
 
 <ul class="actions pagination">
     
-        <li><a href="/Boqueirao_Visualizacao/post/visual-three/"
-                class="button big previous">3 - Observando média mensal de volumes</a></li>
+        <li><a href="/Boqueirao_Visualizacao/post/visualizacao_lab2/"
+                class="button big previous">Gráfico de Dispersão com dados de Boqueirão</a></li>
     
 
     
@@ -372,7 +327,7 @@
 
 
 <li>
-  <a href="//twitter.com/share?url=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2fvisualizacao_lab2%2f&text=Gr%c3%a1fico%20de%20Dispers%c3%a3o%20com%20dados%20de%20Boqueir%c3%a3o&via=" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2facude-velho%2f&text=Uma%20pequena%20lupa%20emba%c3%a7ada%20no%20A%c3%a7ude%20Velho&via=" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -380,7 +335,7 @@
 
 
 <li>
-  <a href="//plus.google.com/share?url=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2fvisualizacao_lab2%2f" target="_blank" class="share-btn google-plus">
+  <a href="//plus.google.com/share?url=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2facude-velho%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
   </a>
@@ -388,7 +343,7 @@
 
 
 <li>
-  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2fvisualizacao_lab2%2f" target="_blank" class="share-btn facebook">
+  <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2facude-velho%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
     </a>
@@ -396,7 +351,7 @@
 
 
 <li>
-  <a href="//reddit.com/submit?url=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2fvisualizacao_lab2%2f&title=Gr%c3%a1fico%20de%20Dispers%c3%a3o%20com%20dados%20de%20Boqueir%c3%a3o" target="_blank" class="share-btn reddit">
+  <a href="//reddit.com/submit?url=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2facude-velho%2f&title=Uma%20pequena%20lupa%20emba%c3%a7ada%20no%20A%c3%a7ude%20Velho" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
   </a>
@@ -404,7 +359,7 @@
 
 
 <li>
-  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2fvisualizacao_lab2%2f&title=Gr%c3%a1fico%20de%20Dispers%c3%a3o%20com%20dados%20de%20Boqueir%c3%a3o" target="_blank" class="share-btn linkedin">
+  <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2facude-velho%2f&title=Uma%20pequena%20lupa%20emba%c3%a7ada%20no%20A%c3%a7ude%20Velho" target="_blank" class="share-btn linkedin">
       <i class="fa fa-linkedin"></i>
       <p>LinkedIn</p>
     </a>
@@ -412,7 +367,7 @@
 
 
 <li>
-  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2fvisualizacao_lab2%2f&title=Gr%c3%a1fico%20de%20Dispers%c3%a3o%20com%20dados%20de%20Boqueir%c3%a3o" target="_blank" class="share-btn stumbleupon">
+  <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2facude-velho%2f&title=Uma%20pequena%20lupa%20emba%c3%a7ada%20no%20A%c3%a7ude%20Velho" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
   </a>
@@ -420,7 +375,7 @@
 
 
 <li>
-  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2fvisualizacao_lab2%2f&description=Gr%c3%a1fico%20de%20Dispers%c3%a3o%20com%20dados%20de%20Boqueir%c3%a3o" target="_blank" class="share-btn pinterest">
+  <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2facude-velho%2f&description=Uma%20pequena%20lupa%20emba%c3%a7ada%20no%20A%c3%a7ude%20Velho" target="_blank" class="share-btn pinterest">
     <i class="fa fa-pinterest-p"></i>
     <p>Pinterest</p>
   </a>
@@ -428,7 +383,7 @@
 
 
 <li>
-  <a href="mailto:?subject=Check out this post by &body=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2fvisualizacao_lab2%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Check out this post by &body=https%3a%2f%2fjuanbarros2.github.io%2fBoqueirao_Visualizacao%2fpost%2facude-velho%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -561,6 +516,20 @@
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/Boqueirao_Visualizacao/post/acude-velho/">Uma pequena lupa embaçada no Açude Velho</a>
+              </h3>
+              
+              <time class="published" datetime='2017-12-06'>
+                December 6, 2017
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/Boqueirao_Visualizacao/post/visualizacao_lab2/">Gráfico de Dispersão com dados de Boqueirão</a>
               </h3>
               
@@ -612,19 +581,6 @@
             </header>
             
 
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/Boqueirao_Visualizacao/post/">Posts</a>
-              </h3>
-              
-              <time class="published" datetime='2017-11-28'>
-                November 28, 2017
-              </time>
-            </header>
-            
           </article>
         
       </div>
