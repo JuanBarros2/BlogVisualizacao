@@ -1,5 +1,8 @@
 let streamGraph = (dados) => {
-    let layerName = ["carros", "motos","total_ciclistas", "caminhoes", "onibus"];
+    let layerName = ["carros", "total_pedestres", "motos","total_ciclistas",  "onibus"];
+    let legenda = ["Carro", "Pedestres","Moto", "Ciclista", "Ônibus"].reverse();
+    var colors = ['#8dd3c7','#ffffb3','#bebada','#fb8072', '#80b1d3'];
+
     dados = dados.filter((dado) => dado.local == "jackson" );
 
     var stack = d3.stack().keys(layerName).offset(d3.stackOffsetWiggle),
@@ -18,23 +21,38 @@ let streamGraph = (dados) => {
     .domain([d3.min(layers, stackMin), d3.max(layers, stackMax)])
     .range([height, 0]);
 
-    var z = d3.scaleLinear()
-    .domain([0, layerName.length])
-        .range(["blue", "yellow"])
-        .clamp(true);
-
     var area = d3.area()
-    .x(function(d, i) { return x(i); })
-    .y0(function(d) { return y(d[0]); })
-    .y1(function(d) { return y(d[1]); });
+        .x((d, i) => x(i))
+        .y0((d) => y(d[0]))
+        .y1((d) => y(d[1]));
 
     svg.selectAll("path")
     .data(layers0)
     .enter().append("path")
     .attr("d", area)
-    .attr("fill", function(d) { 
-        return z(d.index); 
-    });
+    .attr("fill", (d, i) => colors[i]);
+
+    colors = colors.reverse();
+    var legend = svg.append("g")
+        .attr("font-family", "sans-serif")
+        .attr("font-size", 10)
+        .attr("text-anchor", "start")
+        .selectAll("g")
+        .data(legenda)
+        .enter().append("g")
+        .attr("transform", (d, i) => "translate(0," + i * 20 + ")");
+
+    legend.append("rect")
+        .attr("x", width - 80 )
+        .attr("width", 19)
+        .attr("height", 19)
+        .attr("fill", (d, i) => colors[i]);
+
+    legend.append("text")
+        .attr("x", width - 56 )
+        .attr("y", 9.5)
+        .attr("dy", "0.32em")
+        .text(d => d);
 
     function stackMax(layer) {
     return d3.max(layer, function(d) { return d[1]; });
