@@ -13,16 +13,16 @@ let streamGraph = (dados) => {
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
-    var x = d3.scaleLinear()
-    .domain([0, dados.length - 1])
-    .range([0, width]);
+    var x = d3.scaleBand()
+        .domain(dados.map((dado) => dado.horario_inicial))
+        .range([0, width]);
 
     var y = d3.scaleLinear()
     .domain([d3.min(layers, stackMin), d3.max(layers, stackMax)])
-    .range([height, 0]);
+    .range([height-20, 0]);
 
     var area = d3.area()
-        .x((d, i) => x(i))
+        .x((d) => x(d.data.horario_inicial))
         .y0((d) => y(d[0]))
         .y1((d) => y(d[1]));
 
@@ -33,6 +33,7 @@ let streamGraph = (dados) => {
     .attr("fill", (d, i) => colors[i]);
 
     colors = colors.reverse();
+
     var legend = svg.append("g")
         .attr("font-family", "sans-serif")
         .attr("font-size", 10)
@@ -54,6 +55,12 @@ let streamGraph = (dados) => {
         .attr("dy", "0.32em")
         .text(d => d);
 
+    x = d3.scaleBand()
+        .domain(dados.map((dado) => dado.horario_inicial).filter((dado, i) => i%4==0))
+        .range([0, width]);
+    svg.append("g")
+        .attr("transform", "translate(0," + (height-20) + ")")
+        .call(d3.axisBottom(x)); 
     function stackMax(layer) {
     return d3.max(layer, function(d) { return d[1]; });
     }
@@ -69,32 +76,38 @@ let heatmap = (dados) => {
     larguraVis = larguraSVG - margin.left - margin.right, 
     alturaVis = alturaSVG - margin.top - margin.bottom;
     
-    dados = dados.filter((dado) => dado.local == "jackson" );
+    dados = dados.filter((dado) => dado.local == "bobs" );
+
+    const total_pedestres = d3.sum(dados, (dado) => dado.total_pedestres);
 
     let dados_filtrados = [ 
         {
             "veiculo" : "Carro",
             "quant" : d3.sum(dados, (dado) => dado.carros),
             "espaco" : 4.3,
-            "cor" : "#80C783"
+            "cor" : "#8dd3c7",
+            "suporta": 4
         },    
         { 
             "veiculo" : "Ônibus",
             "quant" : d3.sum(dados, (dado) => dado.onibus),
             "espaco" : 12,
-            "cor" : "#3B6EAC"
+            "cor" : "#80b1d3",
+            "suporta": 40
         },
         {
             "veiculo" : "Moto",
             "quant" : d3.sum(dados, (dado) => dado.motos),
             "espaco" : 2,
-            "cor" : "#BCADD1"
+            "cor" : "#bebada",
+            "suporta": 2
         },
         {
             "veiculo" : "Ciclistas",
             "quant" : d3.sum(dados, (dado) => dado.total_ciclistas),
             "espaco" : 1.8,
-            "cor" : "#EE107D"
+            "cor" : "#fb8072",
+            "suporta": 1
         }
     ];
 
@@ -105,7 +118,7 @@ let heatmap = (dados) => {
     .append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
     let x = d3.scaleLinear()
-        .domain([d3.min(dados_filtrados, (d) => d.quant) - 500, d3.max(dados_filtrados, (d) => d.quant) + 500])
+        .domain([d3.min(dados_filtrados, (d) => total_pedestres / d.suporta) - 50, d3.max(dados_filtrados, (d) => total_pedestres / d.suporta) + 50])
         .range([0, larguraVis]); 
     let y = d3.scaleLinear()
         .domain([(d3.min(dados_filtrados, (d) => d.quant * d.espaco) / 1000) - 1, (d3.max(dados_filtrados, (d, i) => d.quant * d.espaco) / 1000) + 1])
@@ -117,21 +130,33 @@ let heatmap = (dados) => {
         .enter()
         .append('circle')
             .attr('cy', d => y((d.quant * d.espaco)/1000))
-            .attr('cx', d => x(d.quant))
-            .attr('r', 40)
-            .attr('fill', (d) => d.cor);
-    grafico.append("g")
-        .attr("transform", "translate(0," + alturaVis + ")")
-        .call(d3.axisBottom(x)); 
+            .attr('cx', d => x(total_pedestres / d.suporta))
+            .attr('r', 20)
+            .attr('fill', (d) => d.cor)
+            .append('text')
+                .text((d)=> d.veiculo);
 
+    grafico.selectAll('g')
+        .data(dados_filtrados)
+        .enter()
+        .append('text')
+            .attr("font-size", 15)
+            .attr("transform", "translate(-17, +5)") 
+            .attr('y', d => y((d.quant * d.espaco)/1000))
+            .attr('x', d => x(total_pedestres / d.suporta))
+            .text((d)=> d.veiculo);
+        
     grafico.append('g')
         .call(d3.axisLeft(y));
+    grafico.append('g')
+        .attr("transform", "translate(0," + (alturaVis) + ")")
+        .call(d3.axisBottom(x));
     grafico.append("text")
         .attr("transform", "translate(-30," + (alturaVis + margin.top)/2 + ") rotate(-90)")
         .text("Espaço gasto (Km)");
     grafico.append("text")
         .attr("transform", "translate(" + ((larguraVis)/2) + "," + (alturaVis + 30) + " )")
-        .text("Total de Veículo"); 
+        .text("Quantidade de Veículo Necessária para "); 
 
 };
 
