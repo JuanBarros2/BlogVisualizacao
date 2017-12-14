@@ -19,22 +19,6 @@ draft: false
       <svg width="960" height="500" id = "visu2"></svg>
     </div>
     <div class="row visu3" id="chart3"/>
-
-  <style>
-    .mychart rect {
-      fill: steelblue;
-    }
-
-    .mychart rect:hover {
-      fill: goldenrod;
-    }
-
-    .mychart text {
-      font: 12px sans-serif;
-      text-anchor: left;
-    }
-  </style>
-
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="/Boqueirao_Visualizacao/post/static/visualizacao-acude.js"></script>
 </div>
