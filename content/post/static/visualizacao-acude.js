@@ -86,14 +86,14 @@ let scaterPlot = (dados) => {
             "quant" : d3.sum(dados, (dado) => dado.carros),
             "espaco" : 4.3,
             "cor" : "#8dd3c7",
-            "suporta": 4
+            "suporta": 3
         },    
         { 
             "veiculo" : "Ônibus",
             "quant" : d3.sum(dados, (dado) => dado.onibus),
             "espaco" : 12,
             "cor" : "#80b1d3",
-            "suporta": 40
+            "suporta": 30
         },
         {
             "veiculo" : "Moto",
@@ -117,6 +117,9 @@ let scaterPlot = (dados) => {
         .domain([(d3.min(dados_filtrados, (d) => d.quant * d.suporta)) - 1000, (d3.max(dados_filtrados, (d, i) => d.quant * d.suporta)) + 1000])
         .range([0, alturaVis])
         .rangeRound([alturaVis, 0]); 
+    let tam = d3.scaleLinear()
+        .domain([d3.min(dados_filtrados, (dado) => dado.espaco), d3.max(dados_filtrados, (dado) => dado.espaco)])
+        .range(10, 40);
         
     let circles = grafico.selectAll('g')
         .data(dados_filtrados)
@@ -124,7 +127,7 @@ let scaterPlot = (dados) => {
         .append('circle')
             .attr('cy', d => y(d.quant * d.suporta))
             .attr('cx', d => x(total_pedestres / d.suporta))
-            .attr('r', 10)
+            .attr('r', d => tam(d.espaco))
             .attr('fill', (d) => d.cor)
             .append('text')
                 .text((d)=> d.veiculo);

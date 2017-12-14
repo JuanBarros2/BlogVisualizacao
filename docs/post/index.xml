@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Juan Barros&#39;s Blog</title>
-    <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/</link>
+    <link>https://juanbarros2.github.io/BlogVisualizacao/post/</link>
     <description>Recent content in Posts on Juan Barros&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Wed, 06 Dec 2017 22:09:46 -0300</lastBuildDate>
     
-	<atom:link href="https://juanbarros2.github.io/Boqueirao_Visualizacao/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://juanbarros2.github.io/BlogVisualizacao/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Uma pequena lupa embaçada no Açude Velho</title>
-      <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/acude-velho/</link>
+      <link>https://juanbarros2.github.io/BlogVisualizacao/post/acude-velho/</link>
       <pubDate>Wed, 06 Dec 2017 22:09:46 -0300</pubDate>
       
-      <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/acude-velho/</guid>
+      <guid>https://juanbarros2.github.io/BlogVisualizacao/post/acude-velho/</guid>
       <description>Uma pequena lupa embaçada no Açude Velho • Ressaltar os horários em que existe mais movimento nas 3 localidades buscando mostrar cada uma separadamente • Quantidade de pessoas que caberia em cada veículo e o espaço que gastaria • Estabelecer relação entre o número de ciclistas e a intensidade do transito • Evidenciar poluição sonora e ambiental exercida pelos automóveis nos horários.
-      .mychart rect { fill: steelblue; } .</description>
+        </description>
     </item>
     
     <item>
       <title>Gráfico de Dispersão com dados de Boqueirão</title>
-      <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visualizacao_lab2/</link>
+      <link>https://juanbarros2.github.io/BlogVisualizacao/post/visualizacao_lab2/</link>
       <pubDate>Tue, 28 Nov 2017 09:14:03 -0300</pubDate>
       
-      <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visualizacao_lab2/</guid>
+      <guid>https://juanbarros2.github.io/BlogVisualizacao/post/visualizacao_lab2/</guid>
       <description>Gráfico de Dispersão com dados de Boqueirão É mostrado horizontalmente os dados 90-percentil. Na vertical temos os valores de 10-percentil. A intensidade do azul indica a mediana dos registros.
   .mychart rect { fill: steelblue; } .mychart rect:hover { fill: goldenrod; } .mychart text { font: 12px sans-serif; text-anchor: left; }  const alturaSVG = 400, larguraSVG = 900; const margin = {top: 10, right: 20, bottom:40, left: 45}, larguraVis = larguraSVG - margin.</description>
     </item>
     
     <item>
       <title>3 - Observando média mensal de volumes</title>
-      <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-three/</link>
+      <link>https://juanbarros2.github.io/BlogVisualizacao/post/visual-three/</link>
       <pubDate>Tue, 14 Nov 2017 14:08:27 -0300</pubDate>
       
-      <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-three/</guid>
+      <guid>https://juanbarros2.github.io/BlogVisualizacao/post/visual-three/</guid>
       <description>const spec = &#34;https://gist.githubusercontent.com/JuanBarros2/5f54da86f6e1f266caa8358ec95d23c8/raw/79df856c5f44872563ac40ec8087e9f6444d58d8/visual3.json&#34;; vegaEmbed(&#39;#vis&#39;, spec).catch(console.warn);   Finalizando o estudo sobre o volume do açude de Boqueirão, focaremos agora no perfil anual que é esperado para o reservatório, ou seja, como normalmente é dada a distribuição de volumes baseada na média mensal relatada.  Como já relatado anteriormente, o açude vem perdendo volume durante os últimos 7 anos e a estiagem prolongada é um dos motivos para a situação crítica no abastecimento.</description>
     </item>
     
     <item>
       <title>2 - Ranqueado médias anuais dos últimos dez anos</title>
-      <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-two/</link>
+      <link>https://juanbarros2.github.io/BlogVisualizacao/post/visual-two/</link>
       <pubDate>Mon, 13 Nov 2017 14:08:20 -0300</pubDate>
       
-      <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-two/</guid>
+      <guid>https://juanbarros2.github.io/BlogVisualizacao/post/visual-two/</guid>
       <description>.floating-box { float: left; margin: 10px; display: block; }     Na última década o açude de Boqueirão sofreu uma crise hídrica jamais vista. Seu nível chegou abaixo de 5% em 2017 e mesmo com racionamento de água a crise quase levou o açude a secar totalmente. Desde o ano de 2011 tivemos uma queda anual considerável, ano após ano até chegar aos níveis atuais.  Ao receber as águas do rio São Francisco foi possível parar o esgotamento completo do manancial, contudo os níveis ainda continuam críticos e a situação demanda cautela, pois ainda temos uma porcentagem muito pequena de água.</description>
     </item>
     
     <item>
       <title>1 - Contagem de registros anuais do volume de Boqueirão</title>
-      <link>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-one/</link>
+      <link>https://juanbarros2.github.io/BlogVisualizacao/post/visual-one/</link>
       <pubDate>Sun, 12 Nov 2017 12:08:48 -0300</pubDate>
       
-      <guid>https://juanbarros2.github.io/Boqueirao_Visualizacao/post/visual-one/</guid>
+      <guid>https://juanbarros2.github.io/BlogVisualizacao/post/visual-one/</guid>
       <description>O açude Epitácio Pessoa, popularmente conhecido como açude de Boqueirão, é considerado uma das principais fontes de água do estado da Paraíba. Graças à sua grande capacidade e localização geográfica, o açude abastece diversas cidades paraibanas e acaba por ter uma grande importância para a economia. Uma cidade diretamente afetada pela distribuição aquífera de Boqueirão(açude) é a cidade de Campina Grande, conhecida nacionalmente por seu potencial tecnológico e sendo um destaque econômico para as cidades vizinhas.</description>
     </item>
     

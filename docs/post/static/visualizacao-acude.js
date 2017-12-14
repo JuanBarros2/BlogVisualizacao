@@ -70,9 +70,9 @@ let streamGraph = (dados) => {
     }
 }
 
-let heatmap = (dados) => {  
-    const alturaSVG = 400, larguraSVG = 900; 
-    const margin = {top: 10, right: 20, bottom:40, left: 45}, 
+let scaterPlot = (dados) => {  
+    const alturaSVG = 400, larguraSVG = 700; 
+    const margin = {top: 10, right: 20, bottom:40, left: 80}, 
     larguraVis = larguraSVG - margin.left - margin.right, 
     alturaVis = alturaSVG - margin.top - margin.bottom;
     
@@ -86,14 +86,14 @@ let heatmap = (dados) => {
             "quant" : d3.sum(dados, (dado) => dado.carros),
             "espaco" : 4.3,
             "cor" : "#8dd3c7",
-            "suporta": 4
+            "suporta": 3
         },    
         { 
             "veiculo" : "Ônibus",
             "quant" : d3.sum(dados, (dado) => dado.onibus),
             "espaco" : 12,
             "cor" : "#80b1d3",
-            "suporta": 40
+            "suporta": 30
         },
         {
             "veiculo" : "Moto",
@@ -101,13 +101,6 @@ let heatmap = (dados) => {
             "espaco" : 2,
             "cor" : "#bebada",
             "suporta": 2
-        },
-        {
-            "veiculo" : "Ciclistas",
-            "quant" : d3.sum(dados, (dado) => dado.total_ciclistas),
-            "espaco" : 1.8,
-            "cor" : "#fb8072",
-            "suporta": 1
         }
     ];
 
@@ -118,20 +111,23 @@ let heatmap = (dados) => {
     .append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
     let x = d3.scaleLinear()
-        .domain([d3.min(dados_filtrados, (d) => total_pedestres / d.suporta) - 50, d3.max(dados_filtrados, (d) => total_pedestres / d.suporta) + 50])
+        .domain([d3.min(dados_filtrados, (d) => total_pedestres / d.suporta) , d3.max(dados_filtrados, (d) => total_pedestres / d.suporta) + 100])
         .range([0, larguraVis]); 
     let y = d3.scaleLinear()
-        .domain([(d3.min(dados_filtrados, (d) => d.quant * d.espaco) / 1000) - 1, (d3.max(dados_filtrados, (d, i) => d.quant * d.espaco) / 1000) + 1])
+        .domain([(d3.min(dados_filtrados, (d) => d.quant * d.suporta)) - 1000, (d3.max(dados_filtrados, (d, i) => d.quant * d.suporta)) + 1000])
         .range([0, alturaVis])
         .rangeRound([alturaVis, 0]); 
+    let tam = d3.scaleLinear()
+        .domain([d3.min(dados_filtrados, (dado) => dado.espaco), d3.max(dados_filtrados, (dado) => dado.espaco)])
+        .range(10, 40);
         
     let circles = grafico.selectAll('g')
         .data(dados_filtrados)
         .enter()
         .append('circle')
-            .attr('cy', d => y((d.quant * d.espaco)/1000))
+            .attr('cy', d => y(d.quant * d.suporta))
             .attr('cx', d => x(total_pedestres / d.suporta))
-            .attr('r', 20)
+            .attr('r', d => tam(d.espaco))
             .attr('fill', (d) => d.cor)
             .append('text')
                 .text((d)=> d.veiculo);
@@ -141,8 +137,8 @@ let heatmap = (dados) => {
         .enter()
         .append('text')
             .attr("font-size", 15)
-            .attr("transform", "translate(-17, +5)") 
-            .attr('y', d => y((d.quant * d.espaco)/1000))
+            .attr("transform", "translate(10, +5)") 
+            .attr('y', d => y(d.quant * d.suporta))
             .attr('x', d => x(total_pedestres / d.suporta))
             .text((d)=> d.veiculo);
         
@@ -152,16 +148,23 @@ let heatmap = (dados) => {
         .attr("transform", "translate(0," + (alturaVis) + ")")
         .call(d3.axisBottom(x));
     grafico.append("text")
-        .attr("transform", "translate(-30," + (alturaVis + margin.top)/2 + ") rotate(-90)")
-        .text("Espaço gasto (Km)");
+        .attr("transform", "translate(-50," + ((alturaVis ))+ ") rotate(-90)")
+        .text("Pessoas transportadas por cada veículo");
     grafico.append("text")
-        .attr("transform", "translate(" + ((larguraVis)/2) + "," + (alturaVis + 30) + " )")
-        .text("Quantidade de Veículo Necessária para "); 
+        .attr("transform", "translate(30," + (alturaVis + 30) + " )")
+        .text("Quantidade de Veículos necessários para transportar todos pedestres"); 
 
 };
 
+let heatmap = (dados) => {
+   
+}
+
 d3.csv('https://raw.githubusercontent.com/luizaugustomm/pessoas-no-acude/master/dados/processados/dados.csv', function(dados) {
     streamGraph(dados);
-    heatmap(dados);
+    scaterPlot(dados);
 });
 
+d3.csv('/Boqueirao_Visualizacao/post/static/acudeSoma.csv',(dados) => {
+    heatmap(dados);
+});
