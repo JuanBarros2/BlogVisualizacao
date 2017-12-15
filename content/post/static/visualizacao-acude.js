@@ -71,7 +71,7 @@ let streamGraph = (dados) => {
 }
 
 let scaterPlot = (dados) => {  
-    const alturaSVG = 400, larguraSVG = 700; 
+    const alturaSVG = 400, larguraSVG = 900; 
     const margin = {top: 10, right: 20, bottom:40, left: 80}, 
     larguraVis = larguraSVG - margin.left - margin.right, 
     alturaVis = alturaSVG - margin.top - margin.bottom;
@@ -111,26 +111,21 @@ let scaterPlot = (dados) => {
     .append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
     let x = d3.scaleLinear()
-        .domain([d3.min(dados_filtrados, (d) => total_pedestres / d.suporta) , d3.max(dados_filtrados, (d) => total_pedestres / d.suporta) + 100])
+        .domain([d3.min(dados_filtrados, (d) => total_pedestres / d.suporta) -100, d3.max(dados_filtrados, (d) => total_pedestres / d.suporta) + 100])
         .range([0, larguraVis]); 
     let y = d3.scaleLinear()
-        .domain([(d3.min(dados_filtrados, (d) => d.quant * d.suporta)) - 1000, (d3.max(dados_filtrados, (d, i) => d.quant * d.suporta)) + 1000])
+        .domain([(d3.min(dados_filtrados, (d) => d.quant)) - 500, (d3.max(dados_filtrados, (d, i) => d.quant)) + 1000])
         .range([0, alturaVis])
-        .rangeRound([alturaVis, 0]); 
-    let tam = d3.scaleLinear()
-        .domain([d3.min(dados_filtrados, (dado) => dado.espaco), d3.max(dados_filtrados, (dado) => dado.espaco)])
-        .range(10, 40);
+        .rangeRound([alturaVis, 0]);
         
     let circles = grafico.selectAll('g')
         .data(dados_filtrados)
         .enter()
         .append('circle')
-            .attr('cy', d => y(d.quant * d.suporta))
+            .attr('cy', d => y(d.quant))
             .attr('cx', d => x(total_pedestres / d.suporta))
-            .attr('r', d => tam(d.espaco))
-            .attr('fill', (d) => d.cor)
-            .append('text')
-                .text((d)=> d.veiculo);
+            .attr('r', 7)
+            .style('fill', (d) => d.cor);
 
     grafico.selectAll('g')
         .data(dados_filtrados)
@@ -138,7 +133,7 @@ let scaterPlot = (dados) => {
         .append('text')
             .attr("font-size", 15)
             .attr("transform", "translate(10, +5)") 
-            .attr('y', d => y(d.quant * d.suporta))
+            .attr('y', d => y(d.quant))
             .attr('x', d => x(total_pedestres / d.suporta))
             .text((d)=> d.veiculo);
         
@@ -149,22 +144,76 @@ let scaterPlot = (dados) => {
         .call(d3.axisBottom(x));
     grafico.append("text")
         .attr("transform", "translate(-50," + ((alturaVis ))+ ") rotate(-90)")
-        .text("Pessoas transportadas por cada veículo");
+        .text("Quantidade de Veículos em um dia");
+
     grafico.append("text")
-        .attr("transform", "translate(30," + (alturaVis + 30) + " )")
-        .text("Quantidade de Veículos necessários para transportar todos pedestres"); 
+        .attr("transform", "translate(30," + (alturaVis + 35) + " )")
+        .text("Quantidade de Veículos Poupados por pedestres"); 
 
 };
 
-let heatmap = (dados) => {
-   
+let barra = (dados) => {
+    const alturaSVG = 80, larguraSVG = 900; 
+    const margin = {top: 20, right: 20, bottom: 20, left: 20}, 
+    larguraVis = larguraSVG - margin.left - margin.right, 
+    alturaVis = alturaSVG - margin.top - margin.bottom;
+
+    const total_pedestres = d3.sum(dados, (dado) => dado.total_pedestres);
+    const total_ciclistas = d3.sum(dados, (dado) => dado.total_ciclistas);
+    const total_carro = d3.sum(dados, (dado) => dado.carros);
+    const total_onibus = d3.sum(dados, (dado) => dado.onibus);
+    const total_moto = d3.sum(dados, (dado) => dado.motos);
+    const total_caminhao = d3.sum(dados, (dado) => dado.caminhaos);
+
+    let dados_filtrados = [ 
+        {
+            "tipo" : "Não Sustentável",
+            "total": total_caminhao+ total_carro + total_moto+ total_onibus,
+            "color": "#d95f02"
+        },    
+        { 
+            "tipo" : "Sustentável",
+            "total": total_ciclistas + total_pedestres,
+            "color": "#1b9e77"
+        }
+    ];
+
+    const total_all = total_caminhao + total_carro + total_ciclistas + total_pedestres + total_onibus + total_moto;
+    let x = d3.scaleLinear()
+        .domain([0, total_all])
+        .range([0, larguraVis]); 
+    let grafico = d3.select('#visu3')
+        .append('svg')
+            .attr('width', larguraVis + margin.left + margin.right)
+            .attr('height', alturaVis + margin.top + margin.bottom)
+            .append('g')
+                .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+        
+    grafico.selectAll('g')
+        .data(dados_filtrados)
+        .enter()
+        .append('rect')
+            .attr('width', d => x(d.total))
+            .attr('height', alturaVis)
+            .style('fill', d => d.color )
+            .style('stroke-width', 2)
+            .style('stroke', "rgb(255,255,255)")
+            .attr('transform', (d,i) => 'translate('+(i==0?0:x(dados_filtrados[i-1].total))+',0)');
+    grafico.selectAll('g')
+            .data(dados_filtrados)
+            .enter()
+            .append('text')
+                .attr('x', 10)
+                .attr('y', alturaVis - 10)
+                .text((d)=> (d.tipo + ' ' + Math.round((d.total/total_all)*100) + '%'))
+                .style("font-weight", "bold")
+                .style('fill', "#FFFFFF" )
+                .attr('transform', (d,i) => 'translate('+(i == 0 ? 0 : x(dados_filtrados[i-1].total))+',0)');
+
 }
 
 d3.csv('https://raw.githubusercontent.com/luizaugustomm/pessoas-no-acude/master/dados/processados/dados.csv', function(dados) {
     streamGraph(dados);
     scaterPlot(dados);
-});
-
-d3.csv('/Boqueirao_Visualizacao/post/static/acudeSoma.csv',(dados) => {
-    heatmap(dados);
+    barra(dados);
 });
