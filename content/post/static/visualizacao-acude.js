@@ -6,8 +6,7 @@ let streamGraph = (dados) => {
     dados = dados.filter((dado) => dado.local == "jackson" );
 
     var stack = d3.stack().keys(layerName).offset(d3.stackOffsetWiggle),
-    layers0 = stack(dados),
-    layers = layers0;
+    layers = stack(dados);
 
     var svg = d3.select("#visu1"),
     width = +svg.attr("width"),
@@ -26,11 +25,23 @@ let streamGraph = (dados) => {
         .y0((d) => y(d[0]))
         .y1((d) => y(d[1]));
 
-    svg.selectAll("path")
-    .data(layers0)
-    .enter().append("path")
-    .attr("d", area)
-    .attr("fill", (d, i) => colors[i]);
+    layers = svg.selectAll("path")
+        .data(layers)
+        .enter()
+        .append("path")
+            .attr("d", area)
+            .attr("class", "layer")
+            .attr("fill", (d, i) => colors[i]);
+
+    d3.selectAll("path.layer")
+        .on("mouseover", (dado) => {
+            d3.selectAll("path")
+                .style("opacity", d => area(d) === area(dado) ? "1" : "0.20" )
+        })
+        .on("mouseout", (dado)=>{
+            d3.selectAll("path")
+            .style("opacity", "1")
+        });
 
     colors = colors.reverse();
 
