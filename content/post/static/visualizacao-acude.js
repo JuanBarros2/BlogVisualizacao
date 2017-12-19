@@ -31,16 +31,21 @@ let streamGraph = (dados) => {
         .append("path")
             .attr("d", area)
             .attr("class", "layer")
-            .attr("fill", (d, i) => colors[i]);
+            .attr("fill", (d, i) => colors[i])
+            .attr("stroke", "grey");
 
     d3.selectAll("path.layer")
         .on("mouseover", (dado) => {
             d3.selectAll("path")
+                .attr("stroke-width", "0.5")
                 .style("opacity", d => area(d) === area(dado) ? "1" : "0.20" )
         })
         .on("mouseout", (dado)=>{
             d3.selectAll("path")
             .style("opacity", "1")
+        })
+        .on("click", (dado)=>{
+            streamGraph([dado])
         });
 
     colors = colors.reverse();
@@ -58,7 +63,9 @@ let streamGraph = (dados) => {
         .attr("x", width - 80 )
         .attr("width", 19)
         .attr("height", 19)
-        .attr("fill", (d, i) => colors[i]);
+        .attr("fill", (d, i) => colors[i])
+        .attr("stroke", "grey")
+        .attr("stroke-width", "0.5");
 
     legend.append("text")
         .attr("x", width - 56 )
