@@ -5,6 +5,13 @@ let streamGraph = (dados) => {
 
     dados = dados.filter((dado) => dado.local == "jackson" );
 
+    const tooltip = d3.select("body")
+        .append('div')
+        .attr('id', "tooltip")
+        .attr('class', "hidden")
+            .append('p')
+            .attr('id', 'titulo_tooltip');
+
     var stack = d3.stack().keys(layerName).offset(d3.stackOffsetWiggle),
     layers = stack(dados);
 
@@ -35,7 +42,18 @@ let streamGraph = (dados) => {
             .attr("stroke", "grey");
 
     d3.selectAll("path.layer")
-        .on("mouseover", (dado) => {
+        .on("mouseover", (dado, i) => {
+            d3.select("#tooltip") // reparou que tem uma div escondida no html?
+  						.style("left", (d3.event.pageX) + "px")
+  						.style("top", (d3.event.pageY ) + "px")
+  						.select("#value")
+  						.text("dsaf");
+            d3.select("#tooltip #titulo_tooltip")
+              .text("dimensaoSelecionada")
+  					// Mostra o tooltip
+  					d3.select("#tooltip").classed("hidden", false);
+
+
             d3.selectAll("path")
                 .attr("stroke-width", "0.5")
                 .style("opacity", d => area(d) === area(dado) ? "1" : "0.20" )
@@ -45,7 +63,7 @@ let streamGraph = (dados) => {
             .style("opacity", "1")
         })
         .on("click", (dado)=>{
-            streamGraph([dado])
+            streamGraph([dado]);
         });
 
     colors = colors.reverse();
@@ -80,11 +98,11 @@ let streamGraph = (dados) => {
         .attr("transform", "translate(0," + (height-20) + ")")
         .call(d3.axisBottom(x)); 
     function stackMax(layer) {
-    return d3.max(layer, function(d) { return d[1]; });
+        return d3.max(layer, function(d) { return d[1]; });
     }
 
     function stackMin(layer) {
-    return d3.min(layer, function(d) { return d[0]; });
+        return d3.min(layer, function(d) { return d[0]; });
     }
 }
 

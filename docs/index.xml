@@ -17,7 +17,7 @@
       <pubDate>Wed, 06 Dec 2017 22:09:46 -0300</pubDate>
       
       <guid>https://juanbarros2.github.io/BlogVisualizacao/post/acude-velho/</guid>
-      <description>Uma pequena lupa embaçada no Açude Velho O Açude Velho é um dos pontos mais movimentados da cidade de Campina Grande. Nele temos vários pontos turísticos e restaurantes que são frequentados por turistas e campinenses. Em seu perímetro existe uma larga faixa que é usada por todos que desejam apreciar a calmaria e paisagem atraente dessa localidade. Também é importante ressaltar que o movimento de veículos no local é bastante intenso e que o açude dá acesso a diversas partes da cidade.</description>
+      <description>#tooltip { position: absolute; width: auto; height: auto; margin:0px; padding: 10px; background-color: #D3F6DB; border-radius: 10px; } #tooltip.hidden { display: none; } #tooltip p { margin: 0; font-family: sans-serif; font-size: 12px; line-height: 20px; }  Uma pequena lupa embaçada no Açude Velho O Açude Velho é um dos pontos mais movimentados da cidade de Campina Grande. Nele temos vários pontos turísticos e restaurantes que são frequentados por turistas e campinenses. Em seu perímetro existe uma larga faixa que é usada por todos que desejam apreciar a calmaria e paisagem atraente dessa localidade.</description>
     </item>
     
     <item>
