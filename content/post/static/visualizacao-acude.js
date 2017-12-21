@@ -3,8 +3,9 @@ let streamGraph = (dados) => {
     let legenda = ["Carro", "Pedestres","Moto", "Ciclista", "Ônibus"].reverse();
     var colors = ['#8dd3c7','#ffffb3','#bebada','#fb8072', '#80b1d3'];
 
-    dados = dados.filter((dado) => dado.local == "jackson" );
-
+    const select = d3.select("#inds").
+        on('change', () => updateSteamGraph(calculateLayers(dados)));
+    
     d3.select("body")
         .append('div')
         .attr('id', "tooltip")
@@ -16,66 +17,14 @@ let streamGraph = (dados) => {
         .attr('id', 'value')
         .style('font-weight', 'bold');
 
-    var stack = d3.stack().keys(layerName).offset(d3.stackOffsetWiggle),
-    layers = stack(dados);
-
+    
     var svg = d3.select("#visu1"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
-    var x = d3.scaleBand()
-        .domain(dados.map((dado) => dado.horario_inicial))
-        .range([0, width]);
-
-    var y = d3.scaleLinear()
-    .domain([d3.min(layers, stackMin), d3.max(layers, stackMax)])
-    .range([height-20, 0]);
-
-    var area = d3.area()
-        .x((d) => x(d.data.horario_inicial))
-        .y0((d) => y(d[0]))
-        .y1((d) => y(d[1]));
-    
-    let result = layers.map(area, layers);
-
-    layers = svg.selectAll("path")
-        .data(layers)
-        .enter()
-        .append("path")
-            .attr("d", area)
-            .attr("class", "layer")
-            .attr("fill", (d, i) => colors[i])
-            .attr("stroke", "grey");
-
-    d3.selectAll("path.layer")
-        .on("mouseover", (dado, i) => {
-            const sum = d3.sum(dado.map((d)=> d.data, dado), (d) => d[layerName[i]]);
-            d3.select("#tooltip")
-  						.style("left", (d3.event.pageX) + "px")
-  						.style("top", (d3.event.pageY ) + "px")
-  						.select("#value")
-                          .text(sum);
-            let titulo = legenda.reverse();
-            d3.select("#tooltip #titulo_tooltip")
-              .text(titulo[i]);
-  			d3.select("#tooltip").classed("hidden", false);
-            d3.selectAll(".layer")
-                .attr("stroke-width", "0.5")
-                .style("opacity", d => area(d) === area(dado) ? "1" : "0.20" );
-            titulo = legenda.reverse();
-        })
-        .on("mouseout", (dado) => {
-            d3.selectAll(".layer")
-                .style("opacity", "1");
-            d3.select("#tooltip").classed("hidden", true);
-
-        })
-        .on("click", (dado)=>{
-            streamGraph([dado]);
-        });
+    updateSteamGraph(calculateLayers(dados));
 
     colors = colors.reverse();
-
     var legend = svg.append("g")
         .attr("font-family", "sans-serif")
         .attr("font-size", 10)
@@ -92,6 +41,7 @@ let streamGraph = (dados) => {
         .attr("fill", (d, i) => colors[i])
         .attr("stroke", "grey")
         .attr("stroke-width", "0.5");
+    colors = colors.reverse();
 
     legend.append("text")
         .attr("x", width - 56 )
@@ -100,7 +50,7 @@ let streamGraph = (dados) => {
         .text(d => d);
 
     x = d3.scaleBand()
-        .domain(dados.map((dado) => dado.horario_inicial).filter((dado, i) => i%4==0))
+        .domain(dados.map((dado) => dado.horario_inicial).filter((dado, i) => i%12==0))
         .range([0, width]);
     svg.append("g")
         .attr("transform", "translate(0," + (height-20) + ")")
@@ -111,6 +61,68 @@ let streamGraph = (dados) => {
 
     function stackMin(layer) {
         return d3.min(layer, function(d) { return d[0]; });
+    }
+
+    function updateSteamGraph(layers){
+        var x = d3.scaleBand()
+            .domain(dados.map((dado) => dado.horario_inicial))
+            .range([0, width]);
+    
+        var y = d3.scaleLinear()
+            .domain([d3.min(layers, stackMin), d3.max(layers, stackMax)])
+            .range([height-20, 0]);
+
+        var area = d3.area()
+        .x((d) => x(d.data.horario_inicial))
+        .y0((d) => y(d[0]))
+        .y1((d) => y(d[1]));
+        
+        camadas = svg.selectAll("path")
+            .data(layers, data => data);
+        camadas.exit().remove();    
+        camadas.enter()
+            .append("path")
+                .attr("d", area)
+                .attr("class", "layer")
+                .attr("fill", (d, i) => colors[i])
+                .attr("stroke", "grey");
+
+        d3.selectAll("path.layer")
+            .on("mouseover", (dado, i) => {
+                const sum = d3.sum(dado.map((d)=> d.data, dado), (d) => d[layerName[i]]);
+                d3.select("#tooltip")
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY ) + "px")
+                            .select("#value")
+                            .text(sum);
+                let titulo = legenda.reverse();
+                d3.select("#tooltip #titulo_tooltip")
+                .text(titulo[i]);
+                d3.select("#tooltip").classed("hidden", false);
+                d3.selectAll(".layer")
+                    .attr("stroke-width", "0.5")
+                    .style("opacity", d => area(d) === area(dado) ? "1" : "0.20" );
+                titulo = legenda.reverse();
+            })
+            .on("mouseout", (dado) => {
+                d3.selectAll(".layer")
+                    .style("opacity", "1");
+                d3.select("#tooltip").classed("hidden", true);
+
+            })
+            .on("click", (dado, i)=>{
+                updateSteamGraph(calculateLayers(dados));
+            });
+        
+    }
+
+    function calculateLayers(dados){
+        
+        const dados_filtrados = dados.filter((dado) => dado.local == select.property('value'));
+
+        var stack = d3.stack().keys(layerName).offset(d3.stackOffsetWiggle),
+        layers = stack(dados_filtrados);
+        return layers;
     }
 }
 

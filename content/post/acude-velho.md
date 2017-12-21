@@ -32,6 +32,11 @@ draft: false
       <p>Dentre os vários pontos turísticos que podemos acessar nessa localidade, se encontra o <a href="https://www.google.com.br/maps/place/Monumento+ao+Sesquicenten%C3%A1rio+de+Campina+Grande/@-7.2261531,-35.8843413,19.75z/data=!4m13!1m7!3m6!1s0x7ac1e50873c3cd5:0x363a371535b8eb22!2sA%C3%A7ude+Velho!3b1!8m2!3d-7.2266407!4d-35.8831956!3m4!1s0x7ac1e451d787139:0xeb7890b1bad27070!8m2!3d-7.2260623!4d-35.8843437">Monumento ao Sesquicentenário de Campina Grande</a> e a <a href="https://www.google.com.br/maps/place/Monumento+Jackson+do+Pandeiro/@-7.2245114,-35.8801692,21z/data=!4m13!1m7!3m6!1s0x7ac1e50873c3cd5:0x363a371535b8eb22!2sA%C3%A7ude+Velho!3b1!8m2!3d-7.2266407!4d-35.8831956!3m4!1s0x7ac1e5a841705db:0xf057b8b163dd7221!8m2!3d-7.2244291!4d-35.8801226">estátua de Jackson do Pandeiro</a>. Além disso, o açude contém diversos restaurantes e redes de <i>fast-food</i>, tendo destaque a filial do <a href="https://www.google.com.br/maps/place/Bob's+-+Campina+Grande/@-7.2266996,-35.8804727,19.83z/data=!4m13!1m7!3m6!1s0x7ac1e50873c3cd5:0x363a371535b8eb22!2sA%C3%A7ude+Velho!3b1!8m2!3d-7.2266407!4d-35.8831956!3m4!1s0x7ac1e5b0feb9c19:0x213b42e85445d87!8m2!3d-7.2268552!4d-35.8804464">Bob's</a> que foi instalada próxima ao <a href="https://www.google.com.br/maps/place/Parque+da+Crian%C3%A7a/@-7.2265791,-35.8785105,18.13z/data=!4m13!1m7!3m6!1s0x7ac1e50873c3cd5:0x363a371535b8eb22!2sA%C3%A7ude+Velho!3b1!8m2!3d-7.2266407!4d-35.8831956!3m4!1s0x7ac1e5bc831e2f3:0x81c496cd609fb605!8m2!3d-7.22682!4d-35.8780861">Parque da Criança</a>. Esses são pontos de intensa circulação de pessoas e veículos e partindo disso podemos aproximar nossa lupa sobre o Açude Velho.</p>
       <p>A primeira questão que trataremos é sobre a movimentação de ciclistas e pedestres nessa localidade. Buscando entender melhor em que horários existe maior movimentação, é possível notar no gráfico abaixo que o movimento de pedestres e ciclistas é maior no início do dia e no fim da tarde.
       </p>
+      <select id="inds">
+        <option value="burrinhos" selected="selected">Burrinhos</option>
+        <option value="jackson">Jackson</option>
+        <option value="bobs">Bobs</option>
+      </select>
       <div class="row visu1" id="chart1">
         <svg width="960" height="500" id = "visu1">
         </svg>
