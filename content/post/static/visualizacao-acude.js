@@ -5,12 +5,16 @@ let streamGraph = (dados) => {
 
     dados = dados.filter((dado) => dado.local == "jackson" );
 
-    const tooltip = d3.select("body")
+    d3.select("body")
         .append('div')
         .attr('id', "tooltip")
         .attr('class', "hidden")
             .append('p')
             .attr('id', 'titulo_tooltip');
+    d3.select("#tooltip")
+        .append('p')
+        .attr('id', 'value')
+        .style('font-weight', 'bold');
 
     var stack = d3.stack().keys(layerName).offset(d3.stackOffsetWiggle),
     layers = stack(dados);
@@ -31,6 +35,8 @@ let streamGraph = (dados) => {
         .x((d) => x(d.data.horario_inicial))
         .y0((d) => y(d[0]))
         .y1((d) => y(d[1]));
+    
+    let result = layers.map(area, layers);
 
     layers = svg.selectAll("path")
         .data(layers)
@@ -43,24 +49,26 @@ let streamGraph = (dados) => {
 
     d3.selectAll("path.layer")
         .on("mouseover", (dado, i) => {
-            d3.select("#tooltip") // reparou que tem uma div escondida no html?
+            const sum = d3.sum(dado.map((d)=> d.data, dado), (d) => d[layerName[i]]);
+            d3.select("#tooltip")
   						.style("left", (d3.event.pageX) + "px")
   						.style("top", (d3.event.pageY ) + "px")
   						.select("#value")
-  						.text("dsaf");
+                          .text(sum);
+            let titulo = legenda.reverse();
             d3.select("#tooltip #titulo_tooltip")
-              .text("dimensaoSelecionada")
-  					// Mostra o tooltip
-  					d3.select("#tooltip").classed("hidden", false);
-
-
-            d3.selectAll("path")
+              .text(titulo[i]);
+  			d3.select("#tooltip").classed("hidden", false);
+            d3.selectAll(".layer")
                 .attr("stroke-width", "0.5")
-                .style("opacity", d => area(d) === area(dado) ? "1" : "0.20" )
+                .style("opacity", d => area(d) === area(dado) ? "1" : "0.20" );
+            titulo = legenda.reverse();
         })
-        .on("mouseout", (dado)=>{
-            d3.selectAll("path")
-            .style("opacity", "1")
+        .on("mouseout", (dado) => {
+            d3.selectAll(".layer")
+                .style("opacity", "1");
+            d3.select("#tooltip").classed("hidden", true);
+
         })
         .on("click", (dado)=>{
             streamGraph([dado]);
