@@ -2,9 +2,11 @@ let streamGraph = (dados) => {
     let layerName = ["carros", "total_pedestres", "motos","total_ciclistas",  "onibus"];
     let legenda = ["Carro", "Pedestres","Moto", "Ciclista", "Ônibus"].reverse();
     var colors = ['#8dd3c7','#ffffb3','#bebada','#fb8072', '#80b1d3'];
+    let wigled = true;
+    var stack = d3.stack().keys(layerName);
 
     const select = d3.select("#inds").
-        on('change', () => updateSteamGraph(calculateLayers(dados)));
+        on('change', () => { wigled = true; updateSteamGraph(calculateLayers(dados))});
     
     d3.select("body")
         .append('div')
@@ -51,7 +53,7 @@ let streamGraph = (dados) => {
 
     x = d3.scaleBand()
         .domain(dados.map((dado) => dado.horario_inicial).filter((dado, i) => i%12==0))
-        .range([0, width]);
+        .range([0, width - 80]);
     svg.append("g")
         .attr("transform", "translate(0," + (height-20) + ")")
         .call(d3.axisBottom(x)); 
@@ -66,7 +68,7 @@ let streamGraph = (dados) => {
     function updateSteamGraph(layers){
         var x = d3.scaleBand()
             .domain(dados.map((dado) => dado.horario_inicial))
-            .range([0, width]);
+            .range([0, width - 80]);
     
         var y = d3.scaleLinear()
             .domain([d3.min(layers, stackMin), d3.max(layers, stackMax)])
@@ -77,7 +79,7 @@ let streamGraph = (dados) => {
         .y0((d) => y(d[0]))
         .y1((d) => y(d[1]));
         
-        camadas = svg.selectAll("path")
+        camadas = svg.selectAll("path.layer")
             .data(layers, data => data);
         camadas.exit().remove();    
         camadas.enter()
@@ -89,12 +91,19 @@ let streamGraph = (dados) => {
 
         d3.selectAll("path.layer")
             .on("mouseover", (dado, i) => {
-                const sum = d3.sum(dado.map((d)=> d.data, dado), (d) => d[layerName[i]]);
+                const sumLay = d3.sum(dado.map((d)=> d.data, dado), (d) => d[layerName[i]]);
+                const text = wigled ? sumLay:
+                Math.round(sumLay/d3.sum(dado, (d) => { 
+                        d = d.data;
+                        return parseInt(d.total_pedestres) + parseInt(d.carros) 
+                        + parseInt(d.total_ciclistas) + parseInt(d.motos) + parseInt(d.onibus)
+                    }) *100) + "%"
+                ;
                 d3.select("#tooltip")
                             .style("left", (d3.event.pageX) + "px")
                             .style("top", (d3.event.pageY ) + "px")
                             .select("#value")
-                            .text(sum);
+                            .text(text);
                 let titulo = legenda.reverse();
                 d3.select("#tooltip #titulo_tooltip")
                 .text(titulo[i]);
@@ -111,17 +120,29 @@ let streamGraph = (dados) => {
 
             })
             .on("click", (dado, i)=>{
-                updateSteamGraph(calculateLayers(dados));
+                if(wigled){
+                    wigled = !wigled;
+                    updateSteamGraph(calculateLayersInOrder(dados));
+                }else{
+                    wigled = !wigled;
+                    updateSteamGraph(calculateLayers(dados));
+                }
+                
             });
         
     }
 
-    function calculateLayers(dados){
+    function calculateLayers(dadosIn){
         
-        const dados_filtrados = dados.filter((dado) => dado.local == select.property('value'));
-
-        var stack = d3.stack().keys(layerName).offset(d3.stackOffsetWiggle),
-        layers = stack(dados_filtrados);
+        let dados_filtrados = dadosIn.filter((dado) => dado.local == select.property('value'));
+        
+        let layers = stack.offset(d3.stackOffsetWiggle)(dados_filtrados);
+        return layers;
+    }
+    function calculateLayersInOrder(dadosIn){
+        let dados_filtrados = dadosIn.filter((dado) => dado.local == select.property('value'));
+        
+        let layers = stack.offset(d3.stackOffsetExpand)(dados_filtrados);
         return layers;
     }
 }
