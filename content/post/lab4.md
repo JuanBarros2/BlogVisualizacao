@@ -24,7 +24,8 @@ div.tooltip {
 }
 </style>
 <p>
-    O gráfico abaixo mostra a porcentagem de professores da Educação Básica com curso superior:
+    O gráfico abaixo mostra a porcentagem de professores da Educação Básica com curso superior. Nele é possível notar que nas regiões Sudeste e Centro-Oeste
+    a maior parte dos professores de ensino básico tem curso superior enquanto nas regiões Norte e Nordeste existe pontos com porcentagens baixas. Desses pontos, podemos destacar municípios do Piauí e da Bahia.
 </p>
 <svg width="100%" height="600"></svg>
 
