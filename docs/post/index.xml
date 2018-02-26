@@ -17,8 +17,7 @@
       <pubDate>Mon, 26 Feb 2018 13:21:21 -0300</pubDate>
       
       <guid>https://juanbarros2.github.io/BlogVisualizacao/post/lab4/</guid>
-      <description> .cidades { fill: none; stroke: #fff; stroke-width: 0.2; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&amp;ldquo;avenir next&amp;rdquo;, Arial, sans-serif; padding: 4px 8px; display: none; }   O gráfico abaixo mostra a porcentagem de professores da Educação Básica com curso superior: 
-    </description>
+      <description>.cidades { fill: none; stroke: #fff; stroke-width: 0.2; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&amp;ldquo;avenir next&amp;rdquo;, Arial, sans-serif; padding: 4px 8px; display: none; }   O gráfico abaixo mostra a porcentagem de professores da Educação Básica com curso superior. Nele é possível notar que nas regiões Sudeste e Centro-Oeste a maior parte dos professores de ensino básico tem curso superior enquanto nas regiões Norte e Nordeste existe pontos com porcentagens baixas.</description>
     </item>
     
     <item>
