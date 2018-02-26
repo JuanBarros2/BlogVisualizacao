@@ -6,10 +6,20 @@
     <description>Recent content on Juan Barros&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 17 Feb 2018 15:00:50 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 26 Feb 2018 13:21:21 -0300</lastBuildDate>
     
 	<atom:link href="https://juanbarros2.github.io/BlogVisualizacao/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Porcentagem de professores da Educação Básica com curso superior</title>
+      <link>https://juanbarros2.github.io/BlogVisualizacao/post/lab4/</link>
+      <pubDate>Mon, 26 Feb 2018 13:21:21 -0300</pubDate>
+      
+      <guid>https://juanbarros2.github.io/BlogVisualizacao/post/lab4/</guid>
+      <description> .cidades { fill: none; stroke: #fff; stroke-width: 0.2; stroke-linejoin: round; } path:hover, path.highlighted { fill: tomato; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&amp;ldquo;avenir next&amp;rdquo;, Arial, sans-serif; padding: 4px 8px; display: none; }   O gráfico abaixo mostra a porcentagem de professores da Educação Básica com curso superior: 
+    </description>
+    </item>
     
     <item>
       <title>Porcentagem de abastecimento de água de poço ou nascente na propriedade - Paraíba</title>
