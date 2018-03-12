@@ -17,8 +17,7 @@
       <pubDate>Mon, 12 Mar 2018 14:46:18 -0300</pubDate>
       
       <guid>https://juanbarros2.github.io/BlogVisualizacao/post/redes/</guid>
-      <description>.node { fill: #ccc; stroke: #fff; stroke-width: 2px; }.link { stroke: #999; stroke-opacity: 0.3; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&amp;ldquo;avenir next&amp;rdquo;, Arial, sans-serif; padding: 4px 8px; display: none; }    A visualização abaixo mostra bandas e artistas que são semelhantes à banda Arctic Monkeys.    
- var width = 1000, height = 1000; var svg = d3.select(&#34;#chart&#34;) .</description>
+      <description>.node { fill: #ccc; stroke: #fff; stroke-width: 2px; }.link { stroke: #999; stroke-opacity: 0.3; } div.tooltip { position: absolute; background-color: white; border: 1px solid black; color: black; font-family:&amp;ldquo;avenir next&amp;rdquo;, Arial, sans-serif; padding: 4px 8px; display: none; }   A banda britânica Arctic Monkeys trás ao cenário indie batidas rápidas e um tom muito associado às bandas de garagem. Atualmente a banda já é conhecida por alguns hits que tiveram destaque, como Do I Wanna Know?</description>
     </item>
     
     <item>

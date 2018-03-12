@@ -22,9 +22,10 @@ draft: false
 }
 </style>
 <div>
-	<p>
-A visualização abaixo mostra bandas e artistas que são semelhantes à banda <a href="https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH">Arctic Monkeys</a>.
+	<p>A banda britânica <a href="https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH" target="_blank">Arctic Monkeys</a> trás ao cenário indie batidas rápidas e um tom muito associado às bandas de garagem. Atualmente a banda já é conhecida por alguns hits que tiveram destaque, como <a href="https://www.youtube.com/watch?v=bpOSxM0rNPM" target="_blank"><i>Do I Wanna Know?</i></a> e <a href="https://youtu.be/VQH8ZTgna3Q" target="_blank"><i>R U Mine?</i></a>, músicas do seu último álbum intitulado <i>AM</i> lançado em 2013. Desde então a banda não lançou músicas e um possível álbum poderá ser lançado ainda nesse ano.
 	</p>
+	<p>Apesar do seu sucesso ser em maior parte associado ao último álbum, a banda já coleciona quatro outros álbuns e é possível notar diferenças no estilo de cada um deles. No começo da carreira a banda utilizava de batidas rápidas e letras variadas que não demonstravam ter muita profundidade. Com o tempo seu ritmo foi ficando mais calmo e melódico com letras que tratavam de romances com músicas mais lentas. Seu último álbum é criticado por fãs mais conservadores que acreditam ter perdido a essência e ter tornado o estilo das músicas muito pop.</p>
+	<p>Por essa razão temos que a banda abrange um estilo de indie que está em divisória com o rock de garagem e o pop-alternativo. Para demonstrar isso, preparei a seguinte visualização que associa os artistas e bandas que mais se assemelham ao estilo da banda: </p>
 </div>
 <div id="chart">
 </div>
