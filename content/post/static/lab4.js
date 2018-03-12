@@ -63,7 +63,6 @@ d3.queue()
 function ready(error, dados) {
     if (error) throw error;
     var cidades = dados.features;
-    console.log("ASD");
     svg.append("g")
         .attr("class", "cidades")
         .selectAll("path")

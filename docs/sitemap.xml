@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://juanbarros2.github.io/BlogVisualizacao/</loc>
+    <lastmod>2018-02-26T13:21:21-03:00</lastmod>
+    <priority>0</priority>
+  </url>
   
   <url>
     <loc>https://juanbarros2.github.io/BlogVisualizacao/post/lab4/</loc>
@@ -40,28 +45,6 @@
   <url>
     <loc>https://juanbarros2.github.io/BlogVisualizacao/post/visual-one/</loc>
     <lastmod>2017-11-12T12:08:48-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://juanbarros2.github.io/BlogVisualizacao/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://juanbarros2.github.io/BlogVisualizacao/</loc>
-    <lastmod>2018-02-26T13:21:21-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://juanbarros2.github.io/BlogVisualizacao/post/</loc>
-    <lastmod>2018-02-26T13:21:21-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://juanbarros2.github.io/BlogVisualizacao/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
