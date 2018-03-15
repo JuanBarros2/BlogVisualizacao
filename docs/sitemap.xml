@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://juanbarros2.github.io/BlogVisualizacao/post/top50/</loc>
+    <lastmod>2018-03-15T10:44:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://juanbarros2.github.io/BlogVisualizacao/post/redes/</loc>
     <lastmod>2018-03-12T14:46:18-03:00</lastmod>
   </url>
@@ -54,13 +59,13 @@
   
   <url>
     <loc>https://juanbarros2.github.io/BlogVisualizacao/</loc>
-    <lastmod>2018-03-12T14:46:18-03:00</lastmod>
+    <lastmod>2018-03-15T10:44:00-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://juanbarros2.github.io/BlogVisualizacao/post/</loc>
-    <lastmod>2018-03-12T14:46:18-03:00</lastmod>
+    <lastmod>2018-03-15T10:44:00-03:00</lastmod>
     <priority>0</priority>
   </url>
   

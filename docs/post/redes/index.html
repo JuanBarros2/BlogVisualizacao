@@ -52,7 +52,7 @@
 
 <meta itemprop="datePublished" content="2018-03-12T14:46:18-03:00" />
 <meta itemprop="dateModified" content="2018-03-12T14:46:18-03:00" />
-<meta itemprop="wordCount" content="497">
+<meta itemprop="wordCount" content="496">
 
 
 
@@ -163,6 +163,18 @@
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/BlogVisualizacao/post/top50/">Meus 50 artistas mais ouvidos</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-03-15'>
+                                    March 15, 2018</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/BlogVisualizacao/post/redes/">Bandas e Artistas parecidos</a></h3>
                                 
                                 <time class="published" datetime=
@@ -204,18 +216,6 @@
                                 <time class="published" datetime=
                                     '2018-02-17'>
                                     February 17, 2018</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/BlogVisualizacao/post/acude-velho/">Uma pequena lupa embaçada no Açude Velho</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2017-12-06'>
-                                    December 6, 2017</time>
                             </header>
                             
 
@@ -395,7 +395,6 @@
         d3.json("/BlogVisualizacao/post/static/arcticnodes.json", function(error, graph) {
           if (error) throw error;
 
-            console.log("dsad");
           let nodes = graph.nodes.filter(d => d.size > 57).reverse();
           let edges = graph.edges.filter(d => nodes.filter(n => n.id === d.source).length > 0);
           edges = edges.filter(d => nodes.filter(n => n.id === d.target).length > 0);
@@ -514,6 +513,9 @@
                 class="button big previous">Porcentagem de professores da Educação Básica com curso superior</a></li>
     
 
+    
+        <li><a href="/BlogVisualizacao/post/top50/"
+                class="button big next">Meus 50 artistas mais ouvidos</a></li>
     
 </ul>
 
@@ -640,6 +642,20 @@
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/BlogVisualizacao/post/top50/">Meus 50 artistas mais ouvidos</a>
+              </h3>
+              
+              <time class="published" datetime='2018-03-15'>
+                March 15, 2018
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/BlogVisualizacao/post/redes/">Bandas e Artistas parecidos</a>
               </h3>
               
@@ -687,20 +703,6 @@
               
               <time class="published" datetime='2018-02-17'>
                 February 17, 2018
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/BlogVisualizacao/post/acude-velho/">Uma pequena lupa embaçada no Açude Velho</a>
-              </h3>
-              
-              <time class="published" datetime='2017-12-06'>
-                December 6, 2017
               </time>
             </header>
             

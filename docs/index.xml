@@ -6,10 +6,20 @@
     <description>Recent content on Juan Barros&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 12 Mar 2018 14:46:18 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 15 Mar 2018 10:44:00 -0300</lastBuildDate>
     
 	<atom:link href="https://juanbarros2.github.io/BlogVisualizacao/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Meus 50 artistas mais ouvidos</title>
+      <link>https://juanbarros2.github.io/BlogVisualizacao/post/top50/</link>
+      <pubDate>Thu, 15 Mar 2018 10:44:00 -0300</pubDate>
+      
+      <guid>https://juanbarros2.github.io/BlogVisualizacao/post/top50/</guid>
+      <description>   .nodes image { clip-path: circle(40% at 50% 50%); -webkit-clip-path: circle(40% at 50% 50%); cursor: pointer; } .label { font-family: &amp;lsquo;Raleway&amp;rsquo;, sans-serif; } div.tooltip { position: absolute; text-align: center; width: 110px; font-family: &amp;lsquo;Raleway&amp;rsquo;, sans-serif; font-size: 15px; background: #2F2F2F; color: #FFF; pointer-events: none; z-index: 100; } .greyed { opacity: 0.1; } .legendlabel { font-size: 12px; text-transform: capitalize; } .legend-hover { font-weight: bold; } .legendlabel:hover{ font-weight: bold; } 
+   </description>
+    </item>
     
     <item>
       <title>Bandas e Artistas parecidos</title>

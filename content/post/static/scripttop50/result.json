@@ -1,0 +1,644 @@
+{
+      "nodes": [
+            {
+                  "genres": [
+                        "garage rock", 
+                        "indie rock", 
+                        "modern rock", 
+                        "permanent wave", 
+                        "sheffield indie"
+                  ], 
+                  "name": "Arctic Monkeys", 
+                  "img": "https://i.scdn.co/image/c488bf987b2f716a539a768a102855450345113d", 
+                  "url": "https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH", 
+                  "num": 1, 
+                  "id": "7Ln80lUS6He07XvHI8qqHH"
+            }, 
+            {
+                  "genres": [
+                        "modern rock"
+                  ], 
+                  "name": "The Neighbourhood", 
+                  "img": "https://i.scdn.co/image/7880e6831c1b83030a4c261f46386b04003b0a97", 
+                  "url": "https://open.spotify.com/artist/77SW9BnxLY8rJ0RciFqkHh", 
+                  "num": 2, 
+                  "id": "77SW9BnxLY8rJ0RciFqkHh"
+            }, 
+            {
+                  "genres": [
+                        "album rock", 
+                        "british invasion", 
+                        "classic rock", 
+                        "merseybeat", 
+                        "psychedelic rock", 
+                        "rock"
+                  ], 
+                  "name": "The Beatles", 
+                  "img": "https://i.scdn.co/image/197cff807611777427c93258f0a1ccdf6b013b09", 
+                  "url": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2", 
+                  "num": 3, 
+                  "id": "3WrFJ7ztbogyGnTHbHJFl2"
+            }, 
+            {
+                  "genres": [], 
+                  "name": "EDEN", 
+                  "img": "https://i.scdn.co/image/e1c162227fc61a168b4f87d0bfff278771e546f0", 
+                  "url": "https://open.spotify.com/artist/1t20wYnTiAT0Bs7H1hv9Wt", 
+                  "num": 4, 
+                  "id": "1t20wYnTiAT0Bs7H1hv9Wt"
+            }, 
+            {
+                  "genres": [
+                        "art pop", 
+                        "dance pop", 
+                        "metropopolis", 
+                        "pop", 
+                        "post-teen pop"
+                  ], 
+                  "name": "Lorde", 
+                  "img": "https://i.scdn.co/image/d25fc756cd04c8b3ea196b7c07c6d057685cc405", 
+                  "url": "https://open.spotify.com/artist/163tK9Wjr9P9DmM0AVK7lm", 
+                  "num": 5, 
+                  "id": "163tK9Wjr9P9DmM0AVK7lm"
+            }, 
+            {
+                  "genres": [
+                        "indie poptimism", 
+                        "indie r&b", 
+                        "indietronica", 
+                        "pop", 
+                        "vapor soul"
+                  ], 
+                  "name": "Jaymes Young", 
+                  "img": "https://i.scdn.co/image/46b3da41cc3e423dd4428430c5ddfb4f04614413", 
+                  "url": "https://open.spotify.com/artist/6QrQ7OrISRYIfS5mtacaw2", 
+                  "num": 6, 
+                  "id": "6QrQ7OrISRYIfS5mtacaw2"
+            }, 
+            {
+                  "genres": [
+                        "alternative rock", 
+                        "garage rock", 
+                        "indie pop", 
+                        "indie rock", 
+                        "modern rock", 
+                        "punk blues"
+                  ], 
+                  "name": "Cage The Elephant", 
+                  "img": "https://i.scdn.co/image/eb2046b1fca6e9fc911e3b77691a0153c9248ec2", 
+                  "url": "https://open.spotify.com/artist/26T3LtbuGT1Fu9m0eRq5X3", 
+                  "num": 7, 
+                  "id": "26T3LtbuGT1Fu9m0eRq5X3"
+            }, 
+            {
+                  "genres": [
+                        "dance pop", 
+                        "pop", 
+                        "post-teen pop"
+                  ], 
+                  "name": "Camila Cabello", 
+                  "img": "https://i.scdn.co/image/f391d0fa675f28ad50d3041a9b1803e5e4c0a5c3", 
+                  "url": "https://open.spotify.com/artist/4nDoRrQiYLoBzwC5BhVJzF", 
+                  "num": 8, 
+                  "id": "4nDoRrQiYLoBzwC5BhVJzF"
+            }, 
+            {
+                  "genres": [
+                        "australian dance", 
+                        "dance pop", 
+                        "pop"
+                  ], 
+                  "name": "Sia", 
+                  "img": "https://i.scdn.co/image/652b6bb0dfaf8aa444f4414ee018699260e74306", 
+                  "url": "https://open.spotify.com/artist/5WUlDfRSoLAfcVSX1WnrxN", 
+                  "num": 9, 
+                  "id": "5WUlDfRSoLAfcVSX1WnrxN"
+            }, 
+            {
+                  "genres": [
+                        "folk-pop", 
+                        "icelandic pop", 
+                        "indie folk", 
+                        "indie pop", 
+                        "metropopolis", 
+                        "modern rock", 
+                        "stomp and holler"
+                  ], 
+                  "name": "Of Monsters and Men", 
+                  "img": "https://i.scdn.co/image/0d2156278c6aaaa75246b43f9dddb93f1c2645e1", 
+                  "url": "https://open.spotify.com/artist/4dwdTW1Lfiq0cM8nBAqIIz", 
+                  "num": 10, 
+                  "id": "4dwdTW1Lfiq0cM8nBAqIIz"
+            }, 
+            {
+                  "genres": [
+                        "canadian pop", 
+                        "pop", 
+                        "rap"
+                  ], 
+                  "name": "The Weeknd", 
+                  "img": "https://i.scdn.co/image/a1bbafd8c21c14fd685a3d8efb0906db7c059a97", 
+                  "url": "https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ", 
+                  "num": 11, 
+                  "id": "1Xyo4u8uXC1ZmMpatF05PJ"
+            }, 
+            {
+                  "genres": [
+                        "dance pop", 
+                        "pop", 
+                        "post-teen pop", 
+                        "r&b"
+                  ], 
+                  "name": "P!nk", 
+                  "img": "https://i.scdn.co/image/afc2d276d9c1b398d4f1048c20584f926296b9c0", 
+                  "url": "https://open.spotify.com/artist/1KCSPY1glIKqW2TotWuXOR", 
+                  "num": 12, 
+                  "id": "1KCSPY1glIKqW2TotWuXOR"
+            }, 
+            {
+                  "genres": [
+                        "alternative dance", 
+                        "alternative rock", 
+                        "chamber pop", 
+                        "dance-punk", 
+                        "garage rock", 
+                        "indie folk", 
+                        "indie pop", 
+                        "indie rock", 
+                        "indietronica", 
+                        "la indie", 
+                        "modern rock", 
+                        "neo-psychedelic", 
+                        "new rave", 
+                        "shimmer pop", 
+                        "stomp and holler", 
+                        "synthpop"
+                  ], 
+                  "name": "Broken Bells", 
+                  "img": "https://i.scdn.co/image/591a58117566440566151fdc35ce4690541f40a7", 
+                  "url": "https://open.spotify.com/artist/6dgwEwnK0YtDfS9XhRwBTG", 
+                  "num": 13, 
+                  "id": "6dgwEwnK0YtDfS9XhRwBTG"
+            }, 
+            {
+                  "genres": [], 
+                  "name": "AURORA", 
+                  "img": "https://i.scdn.co/image/5ba86e815cd5fb386bfaed541b4c434b0d7ec547", 
+                  "url": "https://open.spotify.com/artist/1WgXqy2Dd70QQOU7Ay074N", 
+                  "num": 14, 
+                  "id": "1WgXqy2Dd70QQOU7Ay074N"
+            }, 
+            {
+                  "genres": [
+                        "indie poptimism", 
+                        "indie r&b", 
+                        "vapor soul"
+                  ], 
+                  "name": "Michl", 
+                  "img": "https://i.scdn.co/image/9c60a865e2548bd3e36379c27c3d421a888e8ad2", 
+                  "url": "https://open.spotify.com/artist/0qG3lxHmrUeKzL1BJJ7IBN", 
+                  "num": 15, 
+                  "id": "0qG3lxHmrUeKzL1BJJ7IBN"
+            }, 
+            {
+                  "genres": [
+                        "edm", 
+                        "electro house", 
+                        "moombahton", 
+                        "pop"
+                  ], 
+                  "name": "Major Lazer", 
+                  "img": "https://i.scdn.co/image/c330a7f6245ebd393a57f763a32d8d8a0aa4f34d", 
+                  "url": "https://open.spotify.com/artist/738wLrAtLtCtFOLvQBXOXp", 
+                  "num": 16, 
+                  "id": "738wLrAtLtCtFOLvQBXOXp"
+            }, 
+            {
+                  "genres": [
+                        "mpb"
+                  ], 
+                  "name": "Kid Abelha", 
+                  "img": "https://i.scdn.co/image/ad0583ac95789782e813c90134ee56610f28c7a0", 
+                  "url": "https://open.spotify.com/artist/4bOZtegYNmYOe3gMgPtt0H", 
+                  "num": 17, 
+                  "id": "4bOZtegYNmYOe3gMgPtt0H"
+            }, 
+            {
+                  "genres": [], 
+                  "name": "Amy Winehouse", 
+                  "img": "https://i.scdn.co/image/316a6ef4535c377bdfaea61c99177de9d19661b4", 
+                  "url": "https://open.spotify.com/artist/6Q192DXotxtaysaqNPy5yR", 
+                  "num": 18, 
+                  "id": "6Q192DXotxtaysaqNPy5yR"
+            }, 
+            {
+                  "genres": [
+                        "neo mellow", 
+                        "pop", 
+                        "pop rock", 
+                        "viral pop"
+                  ], 
+                  "name": "Boyce Avenue", 
+                  "img": "https://i.scdn.co/image/607758d6f4fa70670024531ce197588a4761b742", 
+                  "url": "https://open.spotify.com/artist/7CQwac16i1W5ej8YpuL3dv", 
+                  "num": 19, 
+                  "id": "7CQwac16i1W5ej8YpuL3dv"
+            }, 
+            {
+                  "genres": [
+                        "axe", 
+                        "forro", 
+                        "pagode"
+                  ], 
+                  "name": "Mastruz Com Leite", 
+                  "img": "https://i.scdn.co/image/21d40ac5619c3019e01474ffb57b1b91bdd90acd", 
+                  "url": "https://open.spotify.com/artist/6cAXmjYOHC2R7jLrs96KTZ", 
+                  "num": 20, 
+                  "id": "6cAXmjYOHC2R7jLrs96KTZ"
+            }, 
+            {
+                  "genres": [
+                        "dance pop", 
+                        "pop", 
+                        "pop christmas", 
+                        "r&b", 
+                        "soul christmas", 
+                        "urban contemporary"
+                  ], 
+                  "name": "Rihanna", 
+                  "img": "https://i.scdn.co/image/1fc2f537d678d701d7d143a8fd4f0c2f29fbde22", 
+                  "url": "https://open.spotify.com/artist/5pKCCKE2ajJHZ9KAiaK11H", 
+                  "num": 21, 
+                  "id": "5pKCCKE2ajJHZ9KAiaK11H"
+            }, 
+            {
+                  "genres": [
+                        "brazilian punk", 
+                        "mpb"
+                  ], 
+                  "name": "Legi\u00e3o Urbana", 
+                  "img": "https://i.scdn.co/image/03023830927d1cc472dd35938cb7ee1c1718b290", 
+                  "url": "https://open.spotify.com/artist/6tw6EpC9RgmSRZiZg0n22t", 
+                  "num": 22, 
+                  "id": "6tw6EpC9RgmSRZiZg0n22t"
+            }, 
+            {
+                  "genres": [
+                        "dance pop", 
+                        "pop", 
+                        "pop christmas", 
+                        "post-teen pop"
+                  ], 
+                  "name": "Katy Perry", 
+                  "img": "https://i.scdn.co/image/fcdc433e8ccf8d46d58ac70db322feb9b3328731", 
+                  "url": "https://open.spotify.com/artist/6jJ0s89eD6GaHleKKya26X", 
+                  "num": 23, 
+                  "id": "6jJ0s89eD6GaHleKKya26X"
+            }, 
+            {
+                  "genres": [
+                        "pop punk"
+                  ], 
+                  "name": "Twenty One Pilots", 
+                  "img": "https://i.scdn.co/image/228a29e1e5b9af12b3d41bc490c916b719d34acd", 
+                  "url": "https://open.spotify.com/artist/3YQKmKGau1PzlVlkL1iodx", 
+                  "num": 24, 
+                  "id": "3YQKmKGau1PzlVlkL1iodx"
+            }, 
+            {
+                  "genres": [
+                        "australian alternative rock", 
+                        "modern rock", 
+                        "neo-psychedelic", 
+                        "psychedelic rock"
+                  ], 
+                  "name": "Tame Impala", 
+                  "img": "https://i.scdn.co/image/11ea8d229100fedf2a98418ea2b83c86aa11bd9e", 
+                  "url": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb", 
+                  "num": 25, 
+                  "id": "5INjqkS1o8h1imAzPqGZBb"
+            }, 
+            {
+                  "genres": [], 
+                  "name": "Simone & Simaria", 
+                  "img": "https://i.scdn.co/image/086ec804342d29f06df1a057e43a2b58ea47fb1f", 
+                  "url": "https://open.spotify.com/artist/0MInKJqZscEeNc5K3K0mkE", 
+                  "num": 26, 
+                  "id": "0MInKJqZscEeNc5K3K0mkE"
+            }, 
+            {
+                  "genres": [
+                        "mpb"
+                  ], 
+                  "name": "Roberto Carlos", 
+                  "img": "https://i.scdn.co/image/45e8967f18679d0a5791c7f647d9f7ab1bc20f3c", 
+                  "url": "https://open.spotify.com/artist/7fAKtXSdNInWAIf0jVUz65", 
+                  "num": 27, 
+                  "id": "7fAKtXSdNInWAIf0jVUz65"
+            }, 
+            {
+                  "genres": [
+                        "album rock", 
+                        "classic rock", 
+                        "german metal", 
+                        "hard rock", 
+                        "metal", 
+                        "rock"
+                  ], 
+                  "name": "Scorpions", 
+                  "img": "https://i.scdn.co/image/2f123bb26564d8a4cc63bc396a094cc4a74dc782", 
+                  "url": "https://open.spotify.com/artist/27T030eWyCQRmDyuvr1kxY", 
+                  "num": 28, 
+                  "id": "27T030eWyCQRmDyuvr1kxY"
+            }, 
+            {
+                  "genres": [
+                        "indie pop", 
+                        "indie rock", 
+                        "indietronica", 
+                        "la indie", 
+                        "modern rock", 
+                        "shimmer pop", 
+                        "stomp and holler", 
+                        "synthpop"
+                  ], 
+                  "name": "Grouplove", 
+                  "img": "https://i.scdn.co/image/0763ebd8606dc0a33984b7901ebdd9966d79ff24", 
+                  "url": "https://open.spotify.com/artist/3kVUvbeRdcrqQ3oHk5hPdx", 
+                  "num": 29, 
+                  "id": "3kVUvbeRdcrqQ3oHk5hPdx"
+            }, 
+            {
+                  "genres": [
+                        "alternative metal", 
+                        "hard rock", 
+                        "nu metal", 
+                        "post-grunge", 
+                        "rock"
+                  ], 
+                  "name": "System Of A Down", 
+                  "img": "https://i.scdn.co/image/76245f096873524d6b507c093854a41fb90b9ae0", 
+                  "url": "https://open.spotify.com/artist/5eAWCfyUhZtHHtBdNk56l1", 
+                  "num": 30, 
+                  "id": "5eAWCfyUhZtHHtBdNk56l1"
+            }, 
+            {
+                  "genres": [
+                        "baile pop", 
+                        "bossa nova", 
+                        "mpb", 
+                        "rock gaucho", 
+                        "samba"
+                  ], 
+                  "name": "Rita Lee", 
+                  "img": "https://i.scdn.co/image/ea3c56eb7f7db3918c18df330f2b5ae461b55663", 
+                  "url": "https://open.spotify.com/artist/7dnT2FUXhjirperXaH22IJ", 
+                  "num": 31, 
+                  "id": "7dnT2FUXhjirperXaH22IJ"
+            }, 
+            {
+                  "genres": [
+                        "dance pop", 
+                        "indie r&b", 
+                        "pop", 
+                        "post-teen pop"
+                  ], 
+                  "name": "ZAYN", 
+                  "img": "https://i.scdn.co/image/6edec161696d18ca309b9b0fecc9d4acdec71c3f", 
+                  "url": "https://open.spotify.com/artist/5ZsFI1h6hIdQRw2ti0hz81", 
+                  "num": 32, 
+                  "id": "5ZsFI1h6hIdQRw2ti0hz81"
+            }, 
+            {
+                  "genres": [
+                        "schlager"
+                  ], 
+                  "name": "Caterina Valente", 
+                  "img": "https://i.scdn.co/image/1134da4f616996fefba459c28c4c128a87ad56bd", 
+                  "url": "https://open.spotify.com/artist/6U43w7qaIwFTlbJWuLiBrf", 
+                  "num": 33, 
+                  "id": "6U43w7qaIwFTlbJWuLiBrf"
+            }, 
+            {
+                  "genres": [
+                        "deep australian indie"
+                  ], 
+                  "name": "Tash Sultana", 
+                  "img": "https://i.scdn.co/image/231206c4aafcd3454064e446cd6b766dcc328fe2", 
+                  "url": "https://open.spotify.com/artist/6zVFRTB0Y1whWyH7ZNmywf", 
+                  "num": 34, 
+                  "id": "6zVFRTB0Y1whWyH7ZNmywf"
+            }, 
+            {
+                  "genres": [
+                        "canadian pop", 
+                        "pop", 
+                        "post-teen pop", 
+                        "viral pop"
+                  ], 
+                  "name": "Shawn Mendes", 
+                  "img": "https://i.scdn.co/image/889d1206458b26f94aab88e23257706847b41091", 
+                  "url": "https://open.spotify.com/artist/7n2wHs1TKAczGzO7Dd2rGr", 
+                  "num": 35, 
+                  "id": "7n2wHs1TKAczGzO7Dd2rGr"
+            }, 
+            {
+                  "genres": [], 
+                  "name": "Eden Project", 
+                  "img": "https://i.scdn.co/image/e42ecfabfd86d11af27abec5a9d4de3f4561cec6", 
+                  "url": "https://open.spotify.com/artist/26plsJBmW5se3wurhwzaEK", 
+                  "num": 36, 
+                  "id": "26plsJBmW5se3wurhwzaEK"
+            }, 
+            {
+                  "genres": [
+                        "album rock", 
+                        "classic rock", 
+                        "glam metal", 
+                        "hard rock", 
+                        "rock"
+                  ], 
+                  "name": "Guns N' Roses", 
+                  "img": "https://i.scdn.co/image/80920b4fc80b6d970e2934eb8abe27014fc60632", 
+                  "url": "https://open.spotify.com/artist/3qm84nBOXUEQ2vnTfUTTFC", 
+                  "num": 37, 
+                  "id": "3qm84nBOXUEQ2vnTfUTTFC"
+            }, 
+            {
+                  "genres": [
+                        "deep house", 
+                        "deep tropical house", 
+                        "tropical house"
+                  ], 
+                  "name": "Kungs", 
+                  "img": "https://i.scdn.co/image/f750ded7b1787136b38ff0b3a9c78422feb80133", 
+                  "url": "https://open.spotify.com/artist/7keGfmQR4X5w0two1xKZ7d", 
+                  "num": 38, 
+                  "id": "7keGfmQR4X5w0two1xKZ7d"
+            }, 
+            {
+                  "genres": [], 
+                  "name": "Anitta", 
+                  "img": "https://i.scdn.co/image/dd9458a0f3eef89ebafbfe73bb028af665f52dd1", 
+                  "url": "https://open.spotify.com/artist/7FNnA9vBm6EKceENgCGRMb", 
+                  "num": 39, 
+                  "id": "7FNnA9vBm6EKceENgCGRMb"
+            }, 
+            {
+                  "genres": [
+                        "dance pop", 
+                        "pop", 
+                        "post-teen pop", 
+                        "r&b"
+                  ], 
+                  "name": "Beyonc\u00e9", 
+                  "img": "https://i.scdn.co/image/673cd94546df0536954198867516fee18cee1605", 
+                  "url": "https://open.spotify.com/artist/6vWDO969PvNqNYHIOW5v0m", 
+                  "num": 40, 
+                  "id": "6vWDO969PvNqNYHIOW5v0m"
+            }, 
+            {
+                  "genres": [
+                        "bossa nova", 
+                        "mpb", 
+                        "samba"
+                  ], 
+                  "name": "Caetano Veloso", 
+                  "img": "https://i.scdn.co/image/ec133dba3041b73b828d7f91475a7876373fff06", 
+                  "url": "https://open.spotify.com/artist/7HGNYPmbDrMkylWqeFCOIQ", 
+                  "num": 41, 
+                  "id": "7HGNYPmbDrMkylWqeFCOIQ"
+            }, 
+            {
+                  "genres": [
+                        "alternative rock", 
+                        "folk christmas", 
+                        "folk-pop", 
+                        "indie christmas", 
+                        "indie folk", 
+                        "indie pop", 
+                        "indie rock", 
+                        "modern rock", 
+                        "neo mellow", 
+                        "pop rock", 
+                        "stomp and holler"
+                  ], 
+                  "name": "Death Cab for Cutie", 
+                  "img": "https://i.scdn.co/image/c3aebffa260239d70ce4f3eda6c4260adf29095a", 
+                  "url": "https://open.spotify.com/artist/0YrtvWJMgSdVrk3SfNjTbx", 
+                  "num": 42, 
+                  "id": "0YrtvWJMgSdVrk3SfNjTbx"
+            }, 
+            {
+                  "genres": [
+                        "teen pop", 
+                        "underground pop rap"
+                  ], 
+                  "name": "Jeremy Zucker", 
+                  "img": "https://i.scdn.co/image/25d7dc698cda83669b2a2cc9d7b86e89c91ded45", 
+                  "url": "https://open.spotify.com/artist/3gIRvgZssIb9aiirIg0nI3", 
+                  "num": 43, 
+                  "id": "3gIRvgZssIb9aiirIg0nI3"
+            }, 
+            {
+                  "genres": [
+                        "albuquerque indie", 
+                        "alternative rock", 
+                        "chamber pop", 
+                        "folk christmas", 
+                        "folk-pop", 
+                        "garage rock", 
+                        "indie christmas", 
+                        "indie folk", 
+                        "indie pop", 
+                        "indie rock", 
+                        "indietronica", 
+                        "lo-fi", 
+                        "modern rock", 
+                        "neo-psychedelic", 
+                        "pop rock", 
+                        "stomp and holler"
+                  ], 
+                  "name": "The Shins", 
+                  "img": "https://i.scdn.co/image/e9e850f299d7715eb1b05e07d8af3bfc98b6f9c5", 
+                  "url": "https://open.spotify.com/artist/4LG4Bs1Gadht7TCrMytQUO", 
+                  "num": 44, 
+                  "id": "4LG4Bs1Gadht7TCrMytQUO"
+            }, 
+            {
+                  "genres": [
+                        "modern rock", 
+                        "vegas indie"
+                  ], 
+                  "name": "Imagine Dragons", 
+                  "img": "https://i.scdn.co/image/1233a174b66518fd7c7ff9ce96202054ca062f09", 
+                  "url": "https://open.spotify.com/artist/53XhwfbYqKCa1cC15pYq2q", 
+                  "num": 45, 
+                  "id": "53XhwfbYqKCa1cC15pYq2q"
+            }, 
+            {
+                  "genres": [
+                        "alternative dance", 
+                        "chamber pop", 
+                        "folk-pop", 
+                        "indie folk", 
+                        "indie pop", 
+                        "indie poptimism", 
+                        "indie psych-rock", 
+                        "indie rock", 
+                        "indietronica", 
+                        "modern rock", 
+                        "piano rock", 
+                        "shimmer pop", 
+                        "stomp and holler", 
+                        "synthpop"
+                  ], 
+                  "name": "Ra Ra Riot", 
+                  "img": "https://i.scdn.co/image/a101d27e6d434f2412b6017d052422c6a5bb427d", 
+                  "url": "https://open.spotify.com/artist/6FIrstf3kHEg3zBOyLpvxD", 
+                  "num": 46, 
+                  "id": "6FIrstf3kHEg3zBOyLpvxD"
+            }, 
+            {
+                  "genres": [], 
+                  "name": "Alok", 
+                  "img": "https://i.scdn.co/image/a6b977b9b3340cdcc42198f07039aa486afa1df6", 
+                  "url": "https://open.spotify.com/artist/0NGAZxHanS9e0iNHpR8f2W", 
+                  "num": 47, 
+                  "id": "0NGAZxHanS9e0iNHpR8f2W"
+            }, 
+            {
+                  "genres": [], 
+                  "name": "Mar\u00edlia Mendon\u00e7a", 
+                  "img": "https://i.scdn.co/image/314ed79f542b652a1cd5581c0be5591e4c404918", 
+                  "url": "https://open.spotify.com/artist/1yR65psqiazQpeM79CcGh8", 
+                  "num": 48, 
+                  "id": "1yR65psqiazQpeM79CcGh8"
+            }, 
+            {
+                  "genres": [
+                        "album rock", 
+                        "classic rock", 
+                        "glam rock", 
+                        "heavy christmas", 
+                        "rock"
+                  ], 
+                  "name": "Queen", 
+                  "img": "https://i.scdn.co/image/b040846ceba13c3e9c125d68389491094e7f2982", 
+                  "url": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d", 
+                  "num": 49, 
+                  "id": "1dfeR4HaWDbWqFHLkxsg1d"
+            }, 
+            {
+                  "genres": [
+                        "classic schlager", 
+                        "schlager"
+                  ], 
+                  "name": "Bill Ramsey", 
+                  "img": "https://i.scdn.co/image/546951bd33ec18bafdf5fbd4fadd8e368c1700c1", 
+                  "url": "https://open.spotify.com/artist/5R8T1Sb49NySRp0JKa4ebZ", 
+                  "num": 50, 
+                  "id": "5R8T1Sb49NySRp0JKa4ebZ"
+            }
+      ]
+}

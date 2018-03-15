@@ -53,7 +53,6 @@ draft: false
 		d3.json("/BlogVisualizacao/post/static/arcticnodes.json", function(error, graph) {
 		  if (error) throw error;
 
-			console.log("dsad");
 		  let nodes = graph.nodes.filter(d => d.size > 57).reverse();
 		  let edges = graph.edges.filter(d => nodes.filter(n => n.id === d.source).length > 0);
 		  edges = edges.filter(d => nodes.filter(n => n.id === d.target).length > 0);
